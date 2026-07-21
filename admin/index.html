@@ -1,9 +1,124 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Panel EGEI</title><link rel="stylesheet" href="../assets/css/style.css"></head><body><div class="admin-shell">
-<aside class="admin-sidebar"><a class="portal-brand" href="../index.html"><img src="../assets/images/branding/logo-egei.png" alt="EGEI">Panel EGEI</a><nav class="admin-nav"><button class="active" data-id="resumen">Resumen</button><button data-id="inicios">Inicios</button><button data-id="banners">Banners</button><button data-id="noticias">Noticias</button><button data-id="registros">Preinscripciones</button><a href="../index.html">Ver página</a><button id="logout">Cerrar sesión</button></nav></aside>
-<main class="admin-main"><h1>Panel de control</h1>
-<section class="admin-section active" id="resumen"><div class="admin-card-grid"><article class="metric-card"><strong id="m-reg">0</strong><span>Preinscripciones</span></article><article class="metric-card"><strong id="m-news">0</strong><span>Noticias</span></article><article class="metric-card"><strong>7</strong><span>Cursos</span></article><article class="metric-card"><strong>2</strong><span>Modalidades</span></article></div></section>
-<section class="admin-section" id="inicios"><div class="panel-card"><h2>Gestión de próximos inicios</h2><p>Área preparada para conectar fechas con Firebase.</p></div></section>
-<section class="admin-section" id="banners"><div class="panel-card"><h2>Gestión de banners</h2><p>Área preparada para administrar promociones destacadas.</p></div></section>
-<section class="admin-section" id="noticias"><div class="panel-card"><h2>Noticias</h2><form class="admin-form" id="news-form"><input id="news-title" placeholder="Título" required><input id="news-date" type="date" required><textarea id="news-summary" placeholder="Resumen" required></textarea><button class="btn">Guardar</button></form><div id="news-list"></div></div></section>
-<section class="admin-section" id="registros"><div class="panel-card"><h2>Preinscripciones</h2><div style="overflow:auto"><table class="data-table"><thead><tr><th>Nombre</th><th>Celular</th><th>Curso</th><th>Modalidad</th></tr></thead><tbody id="registration-table"></tbody></table></div></div></section>
-</main></div><script src="../assets/js/admin-v7.js"></script></body></html>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071a48">
+  <title>Panel administrativo | EGEI Digital</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/admin-v8.css">
+</head>
+<body class="admin-body">
+<div class="v8-admin-shell" id="admin-shell">
+  <aside class="v8-sidebar" id="sidebar">
+    <div class="v8-brand">
+      <img src="../assets/images/branding/logo-egei.png" alt="EGEI Digital">
+      <div><strong>EGEI Digital</strong><span>Administración</span></div>
+    </div>
+
+    <nav class="v8-nav" aria-label="Panel administrativo">
+      <button class="v8-nav-item active" data-section="dashboard"><span>⌂</span><b>Dashboard</b></button>
+      <button class="v8-nav-item" data-section="courses"><span>▤</span><b>Cursos</b></button>
+      <button class="v8-nav-item" data-section="starts"><span>▣</span><b>Próximos inicios</b></button>
+      <button class="v8-nav-item" data-section="banners"><span>▧</span><b>Banners</b></button>
+      <button class="v8-nav-item" data-section="news"><span>✦</span><b>Noticias</b></button>
+      <button class="v8-nav-item" data-section="registrations"><span>◎</span><b>Preinscripciones</b></button>
+      <button class="v8-nav-item" data-section="settings"><span>⚙</span><b>Configuración</b></button>
+    </nav>
+
+    <div class="v8-sidebar-bottom">
+      <a href="../index.html" class="v8-view-site">Ver página pública</a>
+      <button id="logout-button" class="v8-logout">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <main class="v8-main">
+    <header class="v8-topbar">
+      <div class="v8-topbar-left">
+        <button class="v8-icon-button" id="sidebar-toggle" aria-label="Contraer menú">☰</button>
+        <div>
+          <span class="v8-kicker">Panel de administración</span>
+          <h1 id="section-title">Dashboard</h1>
+        </div>
+      </div>
+
+      <div class="v8-topbar-right">
+        <div class="v8-clock-card" aria-label="Hora actual de La Paz">
+          <span id="current-date">—</span>
+          <strong id="current-clock">00:00:00</strong>
+          <small>La Paz, Bolivia</small>
+        </div>
+        <button class="v8-icon-button" id="theme-toggle" aria-label="Cambiar tema">☾</button>
+        <div class="v8-user">
+          <div class="v8-avatar">AD</div>
+          <div><strong>Administrador</strong><span><i></i> Sesión activa</span></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="v8-section active" id="dashboard">
+      <div class="v8-welcome">
+        <div>
+          <span class="v8-kicker">Resumen general</span>
+          <h2>Bienvenido al panel de EGEI Digital</h2>
+          <p>Controla la actividad del centro de capacitación desde una sola pantalla.</p>
+        </div>
+        <div class="v8-welcome-date" id="welcome-date"></div>
+      </div>
+
+      <div class="v8-metrics">
+        <article class="v8-metric"><span class="v8-metric-icon">◎</span><div><small>Preinscripciones</small><strong id="metric-registrations">0</strong><em>Registros guardados</em></div></article>
+        <article class="v8-metric"><span class="v8-metric-icon">▤</span><div><small>Cursos activos</small><strong id="metric-courses">7</strong><em>Oferta académica</em></div></article>
+        <article class="v8-metric"><span class="v8-metric-icon">▣</span><div><small>Próximos inicios</small><strong id="metric-starts">3</strong><em>Fechas programadas</em></div></article>
+        <article class="v8-metric"><span class="v8-metric-icon">✦</span><div><small>Noticias</small><strong id="metric-news">0</strong><em>Publicaciones</em></div></article>
+      </div>
+
+      <div class="v8-dashboard-grid">
+        <article class="v8-panel v8-chart-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Últimos 7 días</span><h3>Actividad de preinscripciones</h3></div><span class="v8-badge">Actualizado</span></div>
+          <div class="v8-chart" id="activity-chart"></div>
+        </article>
+
+        <article class="v8-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Accesos rápidos</span><h3>Gestión principal</h3></div></div>
+          <div class="v8-quick-actions">
+            <button data-go="courses"><span>＋</span><b>Nuevo curso</b><small>Administrar oferta</small></button>
+            <button data-go="starts"><span>◷</span><b>Agregar inicio</b><small>Programar fecha</small></button>
+            <button data-go="banners"><span>▧</span><b>Nuevo banner</b><small>Publicar promoción</small></button>
+            <button data-go="registrations"><span>◎</span><b>Ver registros</b><small>Revisar interesados</small></button>
+          </div>
+        </article>
+
+        <article class="v8-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Estado del sistema</span><h3>Servicios</h3></div></div>
+          <div class="v8-status-list">
+            <div><span><i class="ok"></i>Página pública</span><b>Activa</b></div>
+            <div><span><i class="ok"></i>Modo oscuro</span><b>Disponible</b></div>
+            <div><span><i class="pending"></i>Excel Online</span><b>Pendiente</b></div>
+            <div><span><i class="pending"></i>Firebase</span><b>Pendiente</b></div>
+          </div>
+        </article>
+
+        <article class="v8-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Sesión actual</span><h3>Información</h3></div></div>
+          <div class="v8-session-info">
+            <div><span>Usuario</span><strong>Administrador</strong></div>
+            <div><span>Zona horaria</span><strong>America/La_Paz</strong></div>
+            <div><span>Versión</span><strong>8 · Módulo 1</strong></div>
+            <div><span>Último acceso</span><strong id="last-access">Ahora</strong></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="v8-section" id="courses"><div class="v8-empty-module"><span>▤</span><h2>Gestión de cursos</h2><p>La estructura visual está lista. Las funciones para crear, editar y eliminar cursos se activarán en el Módulo 2.</p></div></section>
+    <section class="v8-section" id="starts"><div class="v8-empty-module"><span>▣</span><h2>Próximos inicios</h2><p>La administración de fechas, horas, cupos y estados se activará en el Módulo 2.</p></div></section>
+    <section class="v8-section" id="banners"><div class="v8-empty-module"><span>▧</span><h2>Gestión de banners</h2><p>La carga y edición de promociones se incorporará en el Módulo 2.</p></div></section>
+    <section class="v8-section" id="news"><div class="v8-empty-module"><span>✦</span><h2>Noticias</h2><p>El editor de noticias se incorporará en el Módulo 2.</p></div></section>
+    <section class="v8-section" id="registrations"><div class="v8-empty-module"><span>◎</span><h2>Preinscripciones</h2><p>La ventana integrada y la conexión con Excel Online se implementarán en el Módulo 3.</p></div></section>
+    <section class="v8-section" id="settings"><div class="v8-empty-module"><span>⚙</span><h2>Configuración</h2><p>Preferencias visuales, datos institucionales y conexiones externas.</p></div></section>
+  </main>
+</div>
+<script src="../assets/js/admin-v8.js"></script>
+</body>
+</html>

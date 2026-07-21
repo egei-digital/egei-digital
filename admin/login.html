@@ -1,1 +1,45 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Acceso administrativo</title><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="login-shell"><section class="login-card"><img src="../assets/images/branding/logo-egei.png" alt="EGEI"><h1>Panel administrativo</h1><p>Acceso privado para gestionar la página.</p><form class="login-form" id="login-form"><input id="user" placeholder="Usuario" required><input id="password" type="password" placeholder="Contraseña" required><button class="btn">Ingresar</button><small id="error"></small></form><p><small>Demostración: admin / egei2026</small></p></section></main><script src="../assets/js/login-v7.js"></script></body></html>
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Acceso administrativo | EGEI Digital</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/admin-v8.css">
+</head>
+<body class="v8-login-body">
+<main class="v8-login-shell">
+  <section class="v8-login-card">
+    <div class="v8-login-brand"><img src="../assets/images/branding/logo-egei.png" alt="EGEI Digital"><div><strong>EGEI Digital</strong><span>Panel administrativo</span></div></div>
+    <span class="v8-kicker">Acceso privado</span>
+    <h1>Bienvenido nuevamente</h1>
+    <p>Ingresa tus credenciales para administrar la plataforma.</p>
+    <form id="login-form" class="v8-login-form">
+      <label>Usuario<input id="login-user" autocomplete="username" required placeholder="Escribe tu usuario"></label>
+      <label>Contraseña<input id="login-password" type="password" autocomplete="current-password" required placeholder="Escribe tu contraseña"></label>
+      <button class="btn" type="submit">Ingresar al panel</button>
+      <span class="v8-login-error" id="login-error"></span>
+    </form>
+    <div class="v8-demo-access"><strong>Acceso de demostración</strong><span>Usuario: admin · Contraseña: egei2026</span></div>
+    <a href="../index.html" class="v8-back-link">← Volver a la página principal</a>
+  </section>
+  <aside class="v8-login-aside">
+    <span class="v8-kicker light">Versión 8 · Módulo 1</span>
+    <h2>Control moderno para EGEI Digital</h2>
+    <p>Dashboard, reloj en tiempo real, navegación mejorada y modo oscuro completamente legible.</p>
+    <div class="v8-login-features"><span>✓ Dashboard profesional</span><span>✓ Reloj de La Paz</span><span>✓ Menú adaptable</span><span>✓ Tema oscuro corregido</span></div>
+  </aside>
+</main>
+<script>
+document.querySelector('#login-form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const user=document.querySelector('#login-user').value.trim();
+  const pass=document.querySelector('#login-password').value;
+  if(user==='admin'&&pass==='egei2026'){
+    sessionStorage.setItem('egei_admin','active');
+    localStorage.setItem('egei_last_access',new Date().toISOString());
+    location.href='index.html';
+  }else{
+    document.querySelector('#login-error').textContent='Usuario o contraseña incorrectos.';
+  }
+});
+</script>
+</body></html>

@@ -111,14 +111,166 @@
       </div>
     </section>
 
-    <section class="v8-section" id="courses"><div class="v8-empty-module"><span>▤</span><h2>Gestión de cursos</h2><p>La estructura visual está lista. Las funciones para crear, editar y eliminar cursos se activarán en el Módulo 2.</p></div></section>
-    <section class="v8-section" id="starts"><div class="v8-empty-module"><span>▣</span><h2>Próximos inicios</h2><p>La administración de fechas, horas, cupos y estados se activará en el Módulo 2.</p></div></section>
-    <section class="v8-section" id="banners"><div class="v8-empty-module"><span>▧</span><h2>Gestión de banners</h2><p>La carga y edición de promociones se incorporará en el Módulo 2.</p></div></section>
-    <section class="v8-section" id="news"><div class="v8-empty-module"><span>✦</span><h2>Noticias</h2><p>El editor de noticias se incorporará en el Módulo 2.</p></div></section>
+    
+    <section class="v8-section" id="courses">
+      <div class="v8-module-header">
+        <div><span class="v8-kicker">Módulo 2</span><h2>Gestión de cursos</h2><p>Crea, edita, activa o desactiva la oferta académica.</p></div>
+        <button class="v8-primary-btn" data-open-modal="courses-modal">＋ Agregar</button>
+      </div>
+      <article class="v8-panel">
+        <div class="v8-toolbar">
+          <input class="v8-search-input" id="courses-search" placeholder="Buscar...">
+          <span class="v8-count" id="courses-count">0 registros</span>
+        </div>
+        <div class="v8-table-wrap">
+          <table class="v8-data-table">
+            <thead><tr><th>Curso</th><th>Categoría</th><th>Precio</th><th>Modalidad</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody id="courses-table"></tbody>
+          </table>
+        </div>
+      </article>
+      <div class="v8-modal" id="courses-modal" aria-hidden="true">
+        <div class="v8-modal-card">
+          <div class="v8-modal-head"><div><span class="v8-kicker">Formulario</span><h3 id="courses-modal-title">Nuevo registro</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
+          <form id="courses-form" class="v8-admin-form">
+            <input type="hidden" name="id">
+            
+<div class="v8-form-grid">
+<label>Nombre del curso<input name="name" required></label>
+<label>Categoría<select name="category" required><option>Informática</option><option>Administración</option><option>Diseño</option><option>Marketing</option><option>Comercio</option></select></label>
+<label>Precio promocional<input name="price" type="number" min="0" placeholder="230"></label>
+<label>Duración<input name="duration" placeholder="1 mes"></label>
+<label>Modalidad<select name="modality"><option>Presencial y Virtual</option><option>Presencial</option><option>Virtual</option></select></label>
+<label>Estado<select name="status"><option>Activo</option><option>Inactivo</option></select></label>
+<label class="full">Imagen o ruta<input name="image" placeholder="assets/images/cursos/excel.webp"></label>
+<label class="full">Descripción<textarea name="description" rows="4"></textarea></label>
+</div>
+            <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="v8-section" id="starts">
+      <div class="v8-module-header">
+        <div><span class="v8-kicker">Módulo 2</span><h2>Próximos inicios</h2><p>Administra fechas, horarios, cupos y estados de cada grupo.</p></div>
+        <button class="v8-primary-btn" data-open-modal="starts-modal">＋ Agregar</button>
+      </div>
+      <article class="v8-panel">
+        <div class="v8-toolbar">
+          <input class="v8-search-input" id="starts-search" placeholder="Buscar...">
+          <span class="v8-count" id="starts-count">0 registros</span>
+        </div>
+        <div class="v8-table-wrap">
+          <table class="v8-data-table">
+            <thead><tr><th>Curso</th><th>Fecha</th><th>Hora</th><th>Cupos</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody id="starts-table"></tbody>
+          </table>
+        </div>
+      </article>
+      <div class="v8-modal" id="starts-modal" aria-hidden="true">
+        <div class="v8-modal-card">
+          <div class="v8-modal-head"><div><span class="v8-kicker">Formulario</span><h3 id="starts-modal-title">Nuevo registro</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
+          <form id="starts-form" class="v8-admin-form">
+            <input type="hidden" name="id">
+            
+<div class="v8-form-grid">
+<label>Curso<input name="course" required></label>
+<label>Fecha<input name="date" type="date" required></label>
+<label>Hora<input name="time" type="time"></label>
+<label>Cupos<input name="spots" type="number" min="0" value="20"></label>
+<label>Modalidad<select name="modality"><option>Presencial y Virtual</option><option>Presencial</option><option>Virtual</option></select></label>
+<label>Estado<select name="status"><option>Inscripciones abiertas</option><option>Últimos cupos</option><option>Completo</option></select></label>
+</div>
+            <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="v8-section" id="banners">
+      <div class="v8-module-header">
+        <div><span class="v8-kicker">Módulo 2</span><h2>Gestión de banners</h2><p>Publica y organiza promociones sin editar el código de la página.</p></div>
+        <button class="v8-primary-btn" data-open-modal="banners-modal">＋ Agregar</button>
+      </div>
+      <article class="v8-panel">
+        <div class="v8-toolbar">
+          <input class="v8-search-input" id="banners-search" placeholder="Buscar...">
+          <span class="v8-count" id="banners-count">0 registros</span>
+        </div>
+        <div class="v8-table-wrap">
+          <table class="v8-data-table">
+            <thead><tr><th>Título</th><th>Botón</th><th>Expiración</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody id="banners-table"></tbody>
+          </table>
+        </div>
+      </article>
+      <div class="v8-modal" id="banners-modal" aria-hidden="true">
+        <div class="v8-modal-card">
+          <div class="v8-modal-head"><div><span class="v8-kicker">Formulario</span><h3 id="banners-modal-title">Nuevo registro</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
+          <form id="banners-form" class="v8-admin-form">
+            <input type="hidden" name="id">
+            
+<div class="v8-form-grid">
+<label class="full">Título<input name="title" required></label>
+<label class="full">Subtítulo<input name="subtitle"></label>
+<label>Texto del botón<input name="buttonText" value="Inscríbete ahora"></label>
+<label>Enlace del botón<input name="buttonLink" value="#preinscripcion"></label>
+<label class="full">Imagen o ruta<input name="image" placeholder="assets/images/branding/banner-institucional.webp"></label>
+<label>Fecha de expiración<input name="expires" type="date"></label>
+<label>Estado<select name="status"><option>Activo</option><option>Inactivo</option></select></label>
+</div>
+            <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="v8-section" id="news">
+      <div class="v8-module-header">
+        <div><span class="v8-kicker">Módulo 2</span><h2>Noticias</h2><p>Crea publicaciones, borradores y novedades institucionales.</p></div>
+        <button class="v8-primary-btn" data-open-modal="news-modal">＋ Agregar</button>
+      </div>
+      <article class="v8-panel">
+        <div class="v8-toolbar">
+          <input class="v8-search-input" id="news-search" placeholder="Buscar...">
+          <span class="v8-count" id="news-count">0 registros</span>
+        </div>
+        <div class="v8-table-wrap">
+          <table class="v8-data-table">
+            <thead><tr><th>Título</th><th>Fecha</th><th>Estado</th><th>Acciones</th></tr></thead>
+            <tbody id="news-table"></tbody>
+          </table>
+        </div>
+      </article>
+      <div class="v8-modal" id="news-modal" aria-hidden="true">
+        <div class="v8-modal-card">
+          <div class="v8-modal-head"><div><span class="v8-kicker">Formulario</span><h3 id="news-modal-title">Nuevo registro</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
+          <form id="news-form" class="v8-admin-form">
+            <input type="hidden" name="id">
+            
+<div class="v8-form-grid">
+<label class="full">Título<input name="title" required></label>
+<label>Fecha<input name="date" type="date" required></label>
+<label>Estado<select name="status"><option>Publicado</option><option>Borrador</option></select></label>
+<label class="full">Resumen<textarea name="summary" rows="3"></textarea></label>
+<label class="full">Contenido<textarea name="content" rows="7"></textarea></label>
+</div>
+            <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar</button></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="v8-section" id="registrations"><div class="v8-empty-module"><span>◎</span><h2>Preinscripciones</h2><p>La ventana integrada y la conexión con Excel Online se implementarán en el Módulo 3.</p></div></section>
     <section class="v8-section" id="settings"><div class="v8-empty-module"><span>⚙</span><h2>Configuración</h2><p>Preferencias visuales, datos institucionales y conexiones externas.</p></div></section>
   </main>
 </div>
+<div class="v8-toast" id="admin-toast"></div>
 <script src="../assets/js/admin-v8.js"></script>
+<script src="../assets/js/admin-v8-module2.js"></script>
 </body>
 </html>

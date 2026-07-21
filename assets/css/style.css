@@ -357,3 +357,41 @@ body.dark a:not(.btn),body.dark-theme a:not(.btn),html[data-theme="dark"] body a
   .hero-scroll span{display:none}
 }
 @media(prefers-reduced-motion:reduce){.hero-video-media{display:none}.hero-scroll i::after{animation:none}}
+
+
+/* ===== Módulo 5.1 · Calendario público ===== */
+.calendar-section{background:linear-gradient(180deg,#f6f9ff,#fff)}
+.egei-calendar-layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(290px,.65fr);gap:24px;align-items:stretch}
+.egei-calendar-card,.calendar-events-card{border:1px solid var(--line);border-radius:24px;background:var(--white);box-shadow:0 18px 45px rgba(23,55,112,.08)}
+.egei-calendar-card{padding:24px}.calendar-events-card{padding:28px;display:flex;flex-direction:column}
+.egei-calendar-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px}.egei-calendar-header h3{margin:0;text-transform:capitalize}
+.calendar-nav{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--line);border-radius:13px;background:var(--surface);color:var(--ink);font-size:1.55rem;cursor:pointer}
+.calendar-weekdays,.calendar-days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.calendar-weekdays{margin-bottom:8px}.calendar-weekdays span{text-align:center;color:var(--muted);font-size:.72rem;font-weight:900;text-transform:uppercase}
+.calendar-day{position:relative;min-height:76px;padding:10px;border:1px solid transparent;border-radius:15px;background:#f7f9fd;color:var(--ink);text-align:left;font:inherit;cursor:default}.calendar-day.other-month{opacity:.38}.calendar-day.today{border-color:#1557d5}.calendar-day.has-event{cursor:pointer;background:#eaf2ff;border-color:#bfd4ff}.calendar-day.has-event:hover{transform:translateY(-2px);box-shadow:0 9px 20px rgba(21,87,213,.13)}
+.calendar-day-number{font-weight:850}.calendar-dot{position:absolute;left:10px;bottom:10px;width:8px;height:8px;border-radius:50%;background:#1557d5}.calendar-day.selected{background:#1557d5;color:#fff;border-color:#1557d5}.calendar-day.selected .calendar-dot{background:#fff}
+.calendar-events-card h3{margin:10px 0 18px}.calendar-event-list{display:grid;gap:12px;margin-bottom:22px;flex:1}.calendar-event{padding:15px;border:1px solid var(--line);border-radius:15px;background:var(--surface)}.calendar-event time{display:block;color:#1557d5;font-size:.72rem;font-weight:900;text-transform:uppercase}.calendar-event strong{display:block;margin:5px 0;color:var(--ink)}.calendar-event span{color:var(--muted);font-size:.78rem}.calendar-empty{color:var(--muted);line-height:1.6}
+@media(max-width:860px){.egei-calendar-layout{grid-template-columns:1fr}.calendar-day{min-height:62px;padding:8px}.egei-calendar-card{padding:16px}.calendar-events-card{padding:22px}}
+@media(max-width:520px){.calendar-weekdays,.calendar-days{gap:4px}.calendar-day{min-height:50px;border-radius:10px}.calendar-dot{left:8px;bottom:7px}.calendar-weekdays span{font-size:.62rem}}
+
+/* ===== Módulo 5.1 · Contraste reforzado en modo oscuro público ===== */
+body.dark-mode{--white:#0d1a32;--surface:#101f3a;--ink:#f7f9ff;--muted:#c4d0e5;--line:#2a3e61;background:#061126!important;color:#f7f9ff!important}
+body.dark-mode .section-alt,body.dark-mode .calendar-section,body.dark-mode .upcoming-section,body.dark-mode .blog-section{background:#08152a!important}
+body.dark-mode .section-heading h2,body.dark-mode .section-heading p,body.dark-mode .course-body h3,body.dark-mode .course-body p,
+body.dark-mode .start-card h3,body.dark-mode .start-card p,body.dark-mode .benefits-grid h3,body.dark-mode .benefits-grid p,
+body.dark-mode .faq-question,body.dark-mode .faq-answer p,body.dark-mode .blog-card h3,body.dark-mode .blog-card p,
+body.dark-mode .contact-copy h2,body.dark-mode .contact-copy p,body.dark-mode .contact-copy strong,body.dark-mode .contact-copy span,
+body.dark-mode .platform-card h3,body.dark-mode .platform-card p{color:#f3f7ff!important}
+body.dark-mode .section-heading p,body.dark-mode .course-body p,body.dark-mode .start-card p,body.dark-mode .benefits-grid p,
+body.dark-mode .faq-answer p,body.dark-mode .blog-card p,body.dark-mode .calendar-event span,body.dark-mode .calendar-empty{color:#c4d0e5!important}
+body.dark-mode .course-card,body.dark-mode .start-card,body.dark-mode .benefits-grid article,body.dark-mode .faq-item,
+body.dark-mode .blog-card,body.dark-mode .platform-card,body.dark-mode .egei-calendar-card,body.dark-mode .calendar-events-card,
+body.dark-mode .contact-form{background:#0d1a32!important;border-color:#2a3e61!important;color:#f7f9ff!important}
+body.dark-mode .calendar-day,body.dark-mode .calendar-event,body.dark-mode .calendar-nav,body.dark-mode .course-search input,
+body.dark-mode .filter-btn{background:#101f3a!important;border-color:#30486f!important;color:#f7f9ff!important}
+body.dark-mode .calendar-day.has-event{background:#15315c!important;border-color:#4779c8!important}.dark-mode .calendar-day.selected{background:#2b6bd8!important}
+body.dark-mode .calendar-weekdays span,body.dark-mode .course-search span{color:#c4d0e5!important}
+body.dark-mode .eyebrow.dark{color:#83b5ff!important}
+body.dark-mode .text-link,body.dark-mode a:not(.btn):not(.hero-scroll){color:#8cb9ff}
+body.dark-mode .tag{background:#17335d!important;color:#b9d5ff!important}
+body.dark-mode .status{color:#89e0b7!important}
+body.dark-mode .quick-grid{background:#0d1a32!important}.dark-mode .quick-grid strong{color:#fff!important}.dark-mode .quick-grid span{color:#c4d0e5!important}

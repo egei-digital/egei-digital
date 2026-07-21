@@ -136,3 +136,53 @@ counters.forEach(counter=>counterObserver.observe(counter));
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
 })();
+
+
+// Módulo 5.1: calendario de próximos inicios en la página principal
+(() => {
+  const daysEl = document.querySelector('#calendar-days');
+  const titleEl = document.querySelector('#calendar-title');
+  const listEl = document.querySelector('#calendar-event-list');
+  const eventsTitle = document.querySelector('#calendar-events-title');
+  if (!daysEl || !titleEl || !listEl) return;
+
+  const events = [
+    { date: '2026-07-20', course: 'Microsoft Excel', detail: 'Presencial o Virtual · Duración: 1 mes' },
+    { date: '2026-07-21', course: 'Microsoft Office', detail: 'Presencial o Virtual · Programa completo' },
+    { date: '2026-07-22', course: 'Redes Sociales', detail: 'Presencial o Virtual · Duración: 1 mes' }
+  ];
+  const initial = events.length ? new Date(`${events[0].date}T12:00:00`) : new Date();
+  let view = new Date(initial.getFullYear(), initial.getMonth(), 1);
+  let selectedDate = '';
+  const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+  const pretty = value => new Intl.DateTimeFormat('es-BO',{weekday:'long',day:'numeric',month:'long'}).format(new Date(`${value}T12:00:00`));
+
+  function renderEvents(date='') {
+    const monthEvents = events.filter(e => date ? e.date === date : new Date(`${e.date}T12:00:00`).getMonth() === view.getMonth() && new Date(`${e.date}T12:00:00`).getFullYear() === view.getFullYear());
+    eventsTitle.textContent = date ? pretty(date) : 'Inicios programados';
+    listEl.innerHTML = monthEvents.length ? monthEvents.map(e => `<article class="calendar-event"><time>${pretty(e.date)}</time><strong>${e.course}</strong><span>${e.detail}</span></article>`).join('') : '<p class="calendar-empty">No hay inicios publicados para esta fecha. Puedes consultar los próximos grupos disponibles.</p>';
+  }
+
+  function render() {
+    titleEl.textContent = new Intl.DateTimeFormat('es-BO',{month:'long',year:'numeric'}).format(view);
+    const year=view.getFullYear(), month=view.getMonth();
+    const first=new Date(year,month,1); const offset=(first.getDay()+6)%7;
+    const start=new Date(year,month,1-offset);
+    const todayIso=iso(new Date());
+    daysEl.innerHTML='';
+    for(let i=0;i<42;i++){
+      const d=new Date(start); d.setDate(start.getDate()+i); const value=iso(d);
+      const dayEvents=events.filter(e=>e.date===value);
+      const button=document.createElement('button'); button.type='button';
+      button.className='calendar-day'+(d.getMonth()!==month?' other-month':'')+(value===todayIso?' today':'')+(dayEvents.length?' has-event':'')+(value===selectedDate?' selected':'');
+      button.innerHTML=`<span class="calendar-day-number">${d.getDate()}</span>${dayEvents.length?'<i class="calendar-dot" aria-hidden="true"></i>':''}`;
+      button.setAttribute('aria-label',dayEvents.length?`${pretty(value)}: ${dayEvents.map(e=>e.course).join(', ')}`:pretty(value));
+      if(dayEvents.length) button.addEventListener('click',()=>{selectedDate=value;render();renderEvents(value)});
+      daysEl.appendChild(button);
+    }
+    if(!selectedDate) renderEvents();
+  }
+  document.querySelector('#calendar-prev')?.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()-1,1);selectedDate='';render()});
+  document.querySelector('#calendar-next')?.addEventListener('click',()=>{view=new Date(view.getFullYear(),view.getMonth()+1,1);selectedDate='';render()});
+  render();
+})();

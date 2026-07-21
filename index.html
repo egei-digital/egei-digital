@@ -64,7 +64,7 @@
       <div class="hero-video-overlay"></div>
       <div class="hero-video-glow" aria-hidden="true"></div>
       <div class="container hero-content hero-video-content reveal">
-        <span class="eyebrow">Presencial y virtual</span>
+        <span class="eyebrow">Presencial o Virtual</span>
         <h1>Fundación EGEI Digital</h1>
         <p>Capacítate con programas técnicos y digitales diseñados para fortalecer tus conocimientos y mejorar tus oportunidades profesionales.</p>
         <div class="hero-actions">
@@ -97,19 +97,48 @@
         <div class="starts-grid">
           <article class="start-card reveal">
             <div class="start-date"><strong>20</strong><span>JUL</span></div>
-            <div><span class="status">Cupos disponibles</span><h3>Microsoft Excel</h3><p>Presencial o virtual · Duración: 1 mes</p></div>
+            <div><span class="status">Cupos disponibles</span><h3>Microsoft Excel</h3><p>Presencial o Virtual · Duración: 1 mes</p></div>
             <button class="btn btn-small course-info" data-course="Microsoft Excel">Inscribirme</button>
           </article>
           <article class="start-card reveal">
             <div class="start-date"><strong>21</strong><span>JUL</span></div>
-            <div><span class="status">Cupos disponibles</span><h3>Microsoft Office</h3><p>Presencial o virtual · Programa completo</p></div>
+            <div><span class="status">Cupos disponibles</span><h3>Microsoft Office</h3><p>Presencial o Virtual · Programa completo</p></div>
             <button class="btn btn-small course-info" data-course="Microsoft Office">Inscribirme</button>
           </article>
           <article class="start-card reveal">
             <div class="start-date"><strong>22</strong><span>JUL</span></div>
-            <div><span class="status">Últimos cupos</span><h3>Redes Sociales</h3><p>Presencial o virtual · Duración: 1 mes</p></div>
+            <div><span class="status">Últimos cupos</span><h3>Redes Sociales</h3><p>Presencial o Virtual · Duración: 1 mes</p></div>
             <button class="btn btn-small course-info" data-course="Redes Sociales">Inscribirme</button>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section calendar-section" id="calendario">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow dark">Agenda académica</span>
+          <h2>Calendario de próximos inicios</h2>
+          <p>Revisa rápidamente las fechas programadas y selecciona un inicio para solicitar información.</p>
+        </div>
+        <div class="egei-calendar-layout reveal">
+          <div class="egei-calendar-card">
+            <div class="egei-calendar-header">
+              <button class="calendar-nav" id="calendar-prev" type="button" aria-label="Mes anterior">‹</button>
+              <h3 id="calendar-title">Calendario</h3>
+              <button class="calendar-nav" id="calendar-next" type="button" aria-label="Mes siguiente">›</button>
+            </div>
+            <div class="calendar-weekdays" aria-hidden="true">
+              <span>Lun</span><span>Mar</span><span>Mié</span><span>Jue</span><span>Vie</span><span>Sáb</span><span>Dom</span>
+            </div>
+            <div class="calendar-days" id="calendar-days" aria-live="polite"></div>
+          </div>
+          <aside class="calendar-events-card">
+            <span class="eyebrow dark">Fechas destacadas</span>
+            <h3 id="calendar-events-title">Inicios programados</h3>
+            <div class="calendar-event-list" id="calendar-event-list"></div>
+            <a class="btn btn-small" href="#contacto">Consultar disponibilidad</a>
+          </aside>
         </div>
       </div>
     </section>
@@ -220,7 +249,7 @@
         <div class="benefits-grid">
           <article class="reveal"><div class="icon">✓</div><h3>Formación práctica</h3><p>Aprende mediante actividades aplicadas a situaciones reales.</p></article>
           <article class="reveal"><div class="icon">⌚</div><h3>Horarios flexibles</h3><p>Opciones pensadas para estudiantes, trabajadores y emprendedores.</p></article>
-          <article class="reveal"><div class="icon">▣</div><h3>Presencial o virtual</h3><p>Elige la modalidad que se adapte mejor a tu disponibilidad.</p></article>
+          <article class="reveal"><div class="icon">▣</div><h3>Presencial o Virtual</h3><p>Elige la modalidad que se adapte mejor a tu disponibilidad.</p></article>
           <article class="reveal"><div class="icon">★</div><h3>Atención personalizada</h3><p>Recibe orientación antes, durante y después de tu inscripción.</p></article>
         </div>
       </div>
@@ -254,8 +283,8 @@
 
         <div class="faq-list">
           <article class="faq-item reveal">
-            <button class="faq-question" type="button" aria-expanded="false"><span>¿Los cursos son presenciales o virtuales?</span><b>+</b></button>
-            <div class="faq-answer"><p>Contamos con opciones presenciales en La Paz y modalidades virtuales, según disponibilidad del curso.</p></div>
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Los cursos son Presencial o Virtual?</span><b>+</b></button>
+            <div class="faq-answer"><p>Contamos con opciones modalidad Presencial o Virtual, según disponibilidad del curso.</p></div>
           </article>
           <article class="faq-item reveal">
             <button class="faq-question" type="button" aria-expanded="false"><span>¿Cómo puedo reservar un cupo?</span><b>+</b></button>
@@ -289,7 +318,7 @@
           </article>
           <article class="blog-card reveal">
             <span class="blog-date">Julio 2026</span>
-            <h3>Modalidad presencial y virtual</h3>
+            <h3>Modalidad Presencial o Virtual</h3>
             <p>Elige la modalidad que mejor se adapte a tu disponibilidad.</p>
           </article>
           <article class="blog-card reveal">
@@ -322,7 +351,7 @@
           <div class="contact-data">
             <p><strong>Institución:</strong> Centro de Capacitación Técnica Privada EGEI S.R.L.</p>
             <p><strong>Ciudad:</strong> La Paz, Bolivia</p>
-            <p><strong>Modalidad:</strong> Presencial y virtual</p>
+            <p><strong>Modalidad:</strong> Presencial o Virtual</p>
             <p><strong>WhatsApp:</strong> +591 76887684</p>
           </div>
 

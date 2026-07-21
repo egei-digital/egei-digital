@@ -32,6 +32,7 @@
 
       <div class="nav-links" id="menu-principal">
         <a href="#inicio">Inicio</a>
+        <a href="#inicios">Inicios</a>
         <a href="#cursos">Cursos</a>
         <a href="#beneficios">Beneficios</a>
         <a href="#promociones">Promociones</a>
@@ -42,17 +43,41 @@
   </header>
 
   <main id="contenido">
-    <section class="hero">
-      <div class="hero-image" role="img" aria-label="Banner del Centro de Capacitación EGEI"></div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <span class="eyebrow">Presencial y virtual</span>
-        <h1>Capacítate hoy e impulsa tu futuro profesional</h1>
-        <p>Programas técnicos prácticos, accesibles y orientados a mejorar tus oportunidades laborales.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#cursos">Ver cursos</a>
-          <a class="btn btn-outline" href="#contacto">Solicitar información</a>
+    <section class="hero hero-slider" aria-label="Presentación principal">
+      <article class="hero-slide active">
+        <div class="hero-image" style="background-image:url('assets/images/branding/banner-institucional.webp')"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="eyebrow">Presencial y virtual</span>
+          <h1>Capacítate hoy e impulsa tu futuro profesional</h1>
+          <p>Programas técnicos prácticos para mejorar tus oportunidades laborales.</p>
+          <div class="hero-actions"><a class="btn" href="#cursos">Ver cursos</a><a class="btn btn-outline" href="#contacto">Solicitar información</a></div>
         </div>
+      </article>
+      <article class="hero-slide">
+        <div class="hero-image" style="background-image:url('assets/images/cursos/excel.webp')"></div>
+        <div class="hero-overlay hero-overlay-green"></div>
+        <div class="container hero-content">
+          <span class="eyebrow">Curso destacado</span>
+          <h2>Domina Microsoft Excel</h2>
+          <p>Desde nivel básico hasta herramientas financieras y estadísticas.</p>
+          <div class="hero-actions"><button class="btn hero-course-button" data-course="Microsoft Excel">Consultar Excel</button><a class="btn btn-outline" href="#cursos">Explorar cursos</a></div>
+        </div>
+      </article>
+      <article class="hero-slide">
+        <div class="hero-image" style="background-image:url('assets/images/cursos/redes-sociales.webp')"></div>
+        <div class="hero-overlay hero-overlay-blue"></div>
+        <div class="container hero-content">
+          <span class="eyebrow">Marketing digital</span>
+          <h2>Impulsa tu marca en redes sociales</h2>
+          <p>Aprende publicidad, contenido, WhatsApp Business, Canva y herramientas digitales.</p>
+          <div class="hero-actions"><button class="btn hero-course-button" data-course="Redes Sociales">Consultar curso</button><a class="btn btn-outline" href="#promociones">Ver promociones</a></div>
+        </div>
+      </article>
+      <div class="hero-controls container">
+        <button class="hero-arrow hero-prev" type="button" aria-label="Anterior">‹</button>
+        <div class="hero-dots"><button class="hero-dot active" data-slide-to="0"></button><button class="hero-dot" data-slide-to="1"></button><button class="hero-dot" data-slide-to="2"></button></div>
+        <button class="hero-arrow hero-next" type="button" aria-label="Siguiente">›</button>
       </div>
     </section>
 
@@ -65,6 +90,21 @@
       </div>
     </section>
 
+    <section class="section upcoming-section" id="inicios">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow dark">Inscripciones abiertas</span>
+          <h2>Próximos inicios</h2>
+          <p>Confirma las fechas y cupos disponibles por WhatsApp.</p>
+        </div>
+        <div class="starts-grid">
+          <article class="start-card"><div class="start-date"><strong>20</strong><span>JUL</span></div><div><span class="status">Cupos disponibles</span><h3>Microsoft Excel</h3><p>Presencial o virtual · 1 mes</p></div><button class="btn btn-small course-info" data-course="Microsoft Excel">Inscribirme</button></article>
+          <article class="start-card"><div class="start-date"><strong>21</strong><span>JUL</span></div><div><span class="status">Cupos disponibles</span><h3>Microsoft Office</h3><p>Presencial o virtual · Programa completo</p></div><button class="btn btn-small course-info" data-course="Microsoft Office">Inscribirme</button></article>
+          <article class="start-card"><div class="start-date"><strong>22</strong><span>JUL</span></div><div><span class="status">Últimos cupos</span><h3>Redes Sociales</h3><p>Presencial o virtual · 1 mes</p></div><button class="btn btn-small course-info" data-course="Redes Sociales">Inscribirme</button></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="cursos">
       <div class="container">
         <div class="section-heading">
@@ -73,6 +113,10 @@
           <p>Elige el programa que mejor se adapte a tus metas. Consulta por horarios, costos e inicios disponibles.</p>
         </div>
 
+        <div class="course-tools">
+          <label class="course-search"><span>Buscar curso</span><input type="search" id="course-search" placeholder="Ej.: Excel, diseño, comercio..."></label>
+          <span class="course-count" id="course-count">7 cursos disponibles</span>
+        </div>
         <div class="courses-grid">
           <article class="course-card">
             <img src="assets/images/cursos/excel.webp" alt="Curso de Excel" loading="lazy">
@@ -178,7 +222,7 @@
         <div class="contact-copy">
           <span class="eyebrow dark">Estamos para ayudarte</span>
           <h2>Solicita información</h2>
-          <p>Completa el formulario. El botón preparará un mensaje para WhatsApp; antes de publicar, reemplaza el número de ejemplo por el número oficial de EGEI.</p>
+          <p>Completa el formulario y envía tu consulta directamente al WhatsApp oficial de EGEI.</p>
           <div class="contact-data">
             <p><strong>Institución:</strong> Centro de Capacitación Técnica Privada EGEI S.R.L.</p>
             <p><strong>Ciudad:</strong> La Paz, Bolivia</p>
@@ -206,7 +250,7 @@
             <textarea id="mensaje" name="mensaje" rows="4" placeholder="Quiero conocer horarios, costos y fecha de inicio."></textarea>
           </label>
           <button class="btn" type="submit">Enviar por WhatsApp</button>
-          <small>Importante: configura el número oficial en <code>assets/js/main.js</code>.</small>
+          <small>Al enviar, se abrirá WhatsApp con tu consulta preparada.</small>
         </form>
       </div>
     </section>
@@ -231,6 +275,7 @@
     </div>
   </footer>
 
+  <a class="whatsapp-float" href="https://wa.me/59176887684?text=Hola%20EGEI%20Digital%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20cursos." target="_blank" rel="noopener"><span>✆</span><strong>WhatsApp</strong></a>
   <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
   <script src="assets/js/main.js"></script>
 </body>

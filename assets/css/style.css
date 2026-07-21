@@ -181,3 +181,31 @@ button { cursor: pointer; }
   .contact-form { padding: 23px; }
   .footer-grid, .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+
+/* Versión 2 */
+.hero-slider{min-height:680px;position:relative}
+.hero-slide{position:absolute;inset:0;display:grid;align-items:center;opacity:0;visibility:hidden;transition:opacity .7s ease,visibility .7s ease}
+.hero-slide.active{opacity:1;visibility:visible}
+.hero-slide h2{max-width:760px;margin:14px 0 20px;font:900 clamp(2.5rem,6vw,5rem)/1 Montserrat,sans-serif;letter-spacing:-3px;color:#fff}
+.hero-overlay-green{background:linear-gradient(90deg,rgba(2,45,21,.97),rgba(3,55,29,.76) 48%,rgba(2,29,18,.22) 78%)}
+.hero-overlay-blue{background:linear-gradient(90deg,rgba(3,24,72,.97),rgba(0,77,146,.74) 48%,rgba(0,63,125,.18) 78%)}
+.hero-controls{position:absolute;z-index:6;left:50%;bottom:28px;transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:14px;pointer-events:none}
+.hero-controls button{pointer-events:auto}
+.hero-arrow{width:42px;height:42px;border:1px solid rgba(255,255,255,.5);border-radius:50%;background:rgba(4,16,53,.48);color:#fff;font-size:1.8rem}
+.hero-dots{display:flex;gap:8px;padding:10px 13px;background:rgba(4,16,53,.46);border-radius:99px}
+.hero-dot{width:10px;height:10px;border:0;border-radius:50%;background:rgba(255,255,255,.45)}
+.hero-dot.active{width:28px;border-radius:99px;background:var(--gold)}
+.upcoming-section{padding-bottom:30px}
+.starts-grid{display:grid;gap:18px}
+.start-card{display:grid;grid-template-columns:92px 1fr auto;align-items:center;gap:24px;padding:22px 26px;border:1px solid var(--line);border-radius:20px;background:#fff;box-shadow:0 9px 28px rgba(7,25,76,.07)}
+.start-date{width:74px;height:74px;display:grid;place-items:center;align-content:center;border-radius:18px;color:#fff;background:linear-gradient(135deg,var(--navy-2),var(--purple))}
+.start-date strong{font:900 1.65rem/1 Montserrat}.start-date span{font-size:.74rem;font-weight:900}
+.start-card h3{margin:4px 0 3px;font:800 1.15rem Montserrat}.start-card p{margin:0;color:var(--muted)}
+.status{color:var(--green);font-size:.76rem;font-weight:900;text-transform:uppercase}
+.course-tools{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px}
+.course-search{display:grid;gap:7px;width:min(100%,480px);font-weight:800;font-size:.86rem}
+.course-search input{width:100%;padding:14px 18px;border:1px solid #cfd8e8;border-radius:999px;background:#fff}
+.course-card.is-hidden{display:none}.course-count{color:var(--muted);font-size:.9rem}
+.whatsapp-float{position:fixed;right:20px;bottom:78px;z-index:30;display:inline-flex;align-items:center;gap:9px;min-height:50px;padding:0 18px;border-radius:999px;color:#fff;background:#20b858;box-shadow:0 16px 36px rgba(13,135,65,.32);font-weight:900}
+@media(max-width:680px){.hero-slider{min-height:620px}.hero-slide h2{letter-spacing:-1.7px}.start-card{grid-template-columns:74px 1fr;padding:18px;gap:16px}.start-card .btn{grid-column:1/-1;width:100%}.course-tools{align-items:stretch;flex-direction:column}.whatsapp-float{right:14px;bottom:72px;padding:0;width:52px;justify-content:center}.whatsapp-float strong{display:none}}

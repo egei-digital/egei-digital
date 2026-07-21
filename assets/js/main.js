@@ -38,11 +38,6 @@ backToTop?.addEventListener("click", () => {
 form?.addEventListener("submit", event => {
   event.preventDefault();
 
-  if (WHATSAPP_NUMBER === "59100000000") {
-    alert("Antes de publicar, configura el número oficial de WhatsApp en assets/js/main.js.");
-    return;
-  }
-
   const nombre = document.querySelector("#nombre").value.trim();
   const curso = courseSelect.value;
   const mensaje = document.querySelector("#mensaje").value.trim();
@@ -59,3 +54,17 @@ form?.addEventListener("submit", event => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+
+const slides=[...document.querySelectorAll(".hero-slide")],dots=[...document.querySelectorAll(".hero-dot")];
+let currentSlide=0,slideTimer;
+function showSlide(i){currentSlide=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle("active",n===currentSlide));dots.forEach((d,n)=>d.classList.toggle("active",n===currentSlide))}
+function restartSlider(){clearInterval(slideTimer);slideTimer=setInterval(()=>showSlide(currentSlide+1),6500)}
+document.querySelector(".hero-prev")?.addEventListener("click",()=>{showSlide(currentSlide-1);restartSlider()});
+document.querySelector(".hero-next")?.addEventListener("click",()=>{showSlide(currentSlide+1);restartSlider()});
+dots.forEach(d=>d.addEventListener("click",()=>{showSlide(Number(d.dataset.slideTo));restartSlider()}));
+document.querySelectorAll(".hero-course-button").forEach(b=>b.addEventListener("click",()=>{courseSelect.value=b.dataset.course;document.querySelector("#contacto").scrollIntoView({behavior:"smooth"})}));
+restartSlider();
+
+const searchInput=document.querySelector("#course-search"),courseCards=[...document.querySelectorAll(".course-card")],courseCount=document.querySelector("#course-count");
+searchInput?.addEventListener("input",()=>{const t=searchInput.value.toLowerCase().trim();let visible=0;courseCards.forEach(c=>{const match=c.textContent.toLowerCase().includes(t);c.classList.toggle("is-hidden",!match);if(match)visible++});courseCount.textContent=`${visible} ${visible===1?"curso disponible":"cursos disponibles"}`});

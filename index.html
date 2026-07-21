@@ -23,7 +23,7 @@
     <nav class="navbar container" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="EGEI Digital, inicio">
         <img src="assets/images/branding/logo-egei.png" alt="Logo EGEI">
-        <span><strong>EGEI Digital</strong><small>Centro de Capacitación</small></span>
+        <span><strong>EGEI Digital</strong><small>Centro de Capacitación Técnica</small></span>
       </a>
 
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
@@ -35,7 +35,7 @@
         <a href="#inicios">Inicios</a>
         <a href="#cursos">Cursos</a>
         <a href="#beneficios">Beneficios</a>
-        <a href="#promociones">Promociones</a>
+        <a href="#preguntas">Preguntas</a>
         <a href="#contacto">Contacto</a>
         <a class="btn btn-small" href="#contacto">Inscríbete</a>
       </div>
@@ -47,37 +47,53 @@
       <article class="hero-slide active">
         <div class="hero-image" style="background-image:url('assets/images/branding/banner-institucional.webp')"></div>
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
+        <div class="container hero-content reveal">
           <span class="eyebrow">Presencial y virtual</span>
           <h1>Capacítate hoy e impulsa tu futuro profesional</h1>
-          <p>Programas técnicos prácticos para mejorar tus oportunidades laborales.</p>
-          <div class="hero-actions"><a class="btn" href="#cursos">Ver cursos</a><a class="btn btn-outline" href="#contacto">Solicitar información</a></div>
+          <p>Programas técnicos prácticos, accesibles y orientados a mejorar tus oportunidades laborales.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#cursos">Explorar cursos</a>
+            <a class="btn btn-outline" href="#contacto">Solicitar información</a>
+          </div>
         </div>
       </article>
+
       <article class="hero-slide">
         <div class="hero-image" style="background-image:url('assets/images/cursos/excel.webp')"></div>
         <div class="hero-overlay hero-overlay-green"></div>
         <div class="container hero-content">
           <span class="eyebrow">Curso destacado</span>
           <h2>Domina Microsoft Excel</h2>
-          <p>Desde nivel básico hasta herramientas financieras y estadísticas.</p>
-          <div class="hero-actions"><button class="btn hero-course-button" data-course="Microsoft Excel">Consultar Excel</button><a class="btn btn-outline" href="#cursos">Explorar cursos</a></div>
+          <p>Aprende desde nivel básico hasta herramientas estadísticas y financieras.</p>
+          <div class="hero-actions">
+            <button class="btn hero-course-button" data-course="Microsoft Excel">Consultar Excel</button>
+            <a class="btn btn-outline" href="#cursos">Ver todos los cursos</a>
+          </div>
         </div>
       </article>
+
       <article class="hero-slide">
         <div class="hero-image" style="background-image:url('assets/images/cursos/redes-sociales.webp')"></div>
         <div class="hero-overlay hero-overlay-blue"></div>
         <div class="container hero-content">
           <span class="eyebrow">Marketing digital</span>
           <h2>Impulsa tu marca en redes sociales</h2>
-          <p>Aprende publicidad, contenido, WhatsApp Business, Canva y herramientas digitales.</p>
-          <div class="hero-actions"><button class="btn hero-course-button" data-course="Redes Sociales">Consultar curso</button><a class="btn btn-outline" href="#promociones">Ver promociones</a></div>
+          <p>Aprende Facebook Ads, WhatsApp Business, Canva y herramientas de contenido digital.</p>
+          <div class="hero-actions">
+            <button class="btn hero-course-button" data-course="Redes Sociales">Consultar curso</button>
+            <a class="btn btn-outline" href="#inicios">Ver próximos inicios</a>
+          </div>
         </div>
       </article>
+
       <div class="hero-controls container">
-        <button class="hero-arrow hero-prev" type="button" aria-label="Anterior">‹</button>
-        <div class="hero-dots"><button class="hero-dot active" data-slide-to="0"></button><button class="hero-dot" data-slide-to="1"></button><button class="hero-dot" data-slide-to="2"></button></div>
-        <button class="hero-arrow hero-next" type="button" aria-label="Siguiente">›</button>
+        <button class="hero-arrow hero-prev" type="button" aria-label="Banner anterior">‹</button>
+        <div class="hero-dots">
+          <button class="hero-dot active" data-slide-to="0" aria-label="Banner 1"></button>
+          <button class="hero-dot" data-slide-to="1" aria-label="Banner 2"></button>
+          <button class="hero-dot" data-slide-to="2" aria-label="Banner 3"></button>
+        </div>
+        <button class="hero-arrow hero-next" type="button" aria-label="Banner siguiente">›</button>
       </div>
     </section>
 
@@ -92,33 +108,55 @@
 
     <section class="section upcoming-section" id="inicios">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <span class="eyebrow dark">Inscripciones abiertas</span>
           <h2>Próximos inicios</h2>
-          <p>Confirma las fechas y cupos disponibles por WhatsApp.</p>
+          <p>Consulta las fechas, horarios y cupos disponibles antes de realizar tu inscripción.</p>
         </div>
+
         <div class="starts-grid">
-          <article class="start-card"><div class="start-date"><strong>20</strong><span>JUL</span></div><div><span class="status">Cupos disponibles</span><h3>Microsoft Excel</h3><p>Presencial o virtual · 1 mes</p></div><button class="btn btn-small course-info" data-course="Microsoft Excel">Inscribirme</button></article>
-          <article class="start-card"><div class="start-date"><strong>21</strong><span>JUL</span></div><div><span class="status">Cupos disponibles</span><h3>Microsoft Office</h3><p>Presencial o virtual · Programa completo</p></div><button class="btn btn-small course-info" data-course="Microsoft Office">Inscribirme</button></article>
-          <article class="start-card"><div class="start-date"><strong>22</strong><span>JUL</span></div><div><span class="status">Últimos cupos</span><h3>Redes Sociales</h3><p>Presencial o virtual · 1 mes</p></div><button class="btn btn-small course-info" data-course="Redes Sociales">Inscribirme</button></article>
+          <article class="start-card reveal">
+            <div class="start-date"><strong>20</strong><span>JUL</span></div>
+            <div><span class="status">Cupos disponibles</span><h3>Microsoft Excel</h3><p>Presencial o virtual · Duración: 1 mes</p></div>
+            <button class="btn btn-small course-info" data-course="Microsoft Excel">Inscribirme</button>
+          </article>
+          <article class="start-card reveal">
+            <div class="start-date"><strong>21</strong><span>JUL</span></div>
+            <div><span class="status">Cupos disponibles</span><h3>Microsoft Office</h3><p>Presencial o virtual · Programa completo</p></div>
+            <button class="btn btn-small course-info" data-course="Microsoft Office">Inscribirme</button>
+          </article>
+          <article class="start-card reveal">
+            <div class="start-date"><strong>22</strong><span>JUL</span></div>
+            <div><span class="status">Últimos cupos</span><h3>Redes Sociales</h3><p>Presencial o virtual · Duración: 1 mes</p></div>
+            <button class="btn btn-small course-info" data-course="Redes Sociales">Inscribirme</button>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="cursos">
+    <section class="section section-alt" id="cursos">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <span class="eyebrow dark">Formación para todos</span>
           <h2>Nuestros cursos</h2>
-          <p>Elige el programa que mejor se adapte a tus metas. Consulta por horarios, costos e inicios disponibles.</p>
+          <p>Elige el programa que mejor se adapte a tus objetivos profesionales.</p>
         </div>
 
-        <div class="course-tools">
-          <label class="course-search"><span>Buscar curso</span><input type="search" id="course-search" placeholder="Ej.: Excel, diseño, comercio..."></label>
-          <span class="course-count" id="course-count">7 cursos disponibles</span>
+        <div class="course-tools reveal">
+          <label class="course-search">
+            <span>Buscar curso</span>
+            <input type="search" id="course-search" placeholder="Ej.: Excel, diseño, comercio..." autocomplete="off">
+          </label>
+          <div class="course-filters" aria-label="Filtrar cursos">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="digital">Digital</button>
+            <button class="filter-btn" data-filter="administrativo">Administrativo</button>
+            <button class="filter-btn" data-filter="tecnico">Técnico</button>
+          </div>
         </div>
+
         <div class="courses-grid">
-          <article class="course-card">
+          <article class="course-card reveal" data-category="digital">
             <img src="assets/images/cursos/excel.webp" alt="Curso de Excel" loading="lazy">
             <div class="course-body">
               <span class="tag">1 mes</span>
@@ -128,47 +166,47 @@
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card reveal" data-category="digital">
             <img src="assets/images/cursos/office.webp" alt="Curso de Microsoft Office" loading="lazy">
             <div class="course-body">
-              <span class="tag">4 meses</span>
+              <span class="tag">Programa completo</span>
               <h3>Microsoft Office</h3>
-              <p>Domina Word, Excel, PowerPoint y Publisher para el trabajo y los estudios.</p>
+              <p>Word, Excel, PowerPoint y Publisher para el trabajo y los estudios.</p>
               <button class="text-link course-info" data-course="Microsoft Office">Consultar curso →</button>
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card reveal" data-category="digital">
             <img src="assets/images/cursos/diseno-grafico.webp" alt="Curso de Diseño Gráfico" loading="lazy">
             <div class="course-body">
-              <span class="tag">4 meses</span>
+              <span class="tag">Programa creativo</span>
               <h3>Diseño Gráfico</h3>
               <p>Photoshop, Illustrator, InDesign, Premiere y herramientas de audio.</p>
               <button class="text-link course-info" data-course="Diseño Gráfico">Consultar curso →</button>
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card reveal" data-category="digital">
             <img src="assets/images/cursos/redes-sociales.webp" alt="Curso de Redes Sociales" loading="lazy">
             <div class="course-body">
               <span class="tag">1 mes</span>
               <h3>Redes Sociales</h3>
-              <p>Facebook Ads, WhatsApp Business, Canva, ChatGPT y publicidad digital.</p>
+              <p>Facebook Ads, WhatsApp Business, Canva y publicidad digital.</p>
               <button class="text-link course-info" data-course="Redes Sociales">Consultar curso →</button>
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card reveal" data-category="administrativo">
             <img src="assets/images/cursos/comercio-exterior.webp" alt="Curso de Comercio Exterior" loading="lazy">
             <div class="course-body">
-              <span class="tag">4 meses</span>
+              <span class="tag">Gestión y aduanas</span>
               <h3>Comercio Exterior</h3>
               <p>Importaciones, gestión aduanera, clasificación arancelaria e Incoterms.</p>
               <button class="text-link course-info" data-course="Comercio Exterior">Consultar curso →</button>
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card reveal" data-category="tecnico">
             <img src="assets/images/cursos/ensamblaje.webp" alt="Curso de Ensamblaje de Computadoras" loading="lazy">
             <div class="course-body">
               <span class="tag">1 mes</span>
@@ -178,7 +216,7 @@
             </div>
           </article>
 
-          <article class="course-card">
+          <article class="course-card reveal" data-category="administrativo">
             <img src="assets/images/cursos/secretariado.webp" alt="Curso de Secretariado Comercial Administrativo" loading="lazy">
             <div class="course-body">
               <span class="tag">1 mes</span>
@@ -188,30 +226,70 @@
             </div>
           </article>
         </div>
+
+        <p class="empty-state" id="empty-state" hidden>No encontramos cursos con esa búsqueda.</p>
       </div>
     </section>
 
-    <section class="section section-alt" id="beneficios">
+    <section class="section" id="beneficios">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <span class="eyebrow dark">Por qué elegir EGEI</span>
           <h2>Capacitación pensada para avanzar</h2>
         </div>
         <div class="benefits-grid">
-          <article><div class="icon">✓</div><h3>Formación práctica</h3><p>Aprende mediante actividades aplicadas a situaciones reales.</p></article>
-          <article><div class="icon">⌚</div><h3>Horarios flexibles</h3><p>Opciones pensadas para estudiantes, trabajadores y emprendedores.</p></article>
-          <article><div class="icon">▣</div><h3>Presencial o virtual</h3><p>Elige la modalidad que se adapte mejor a tu disponibilidad.</p></article>
-          <article><div class="icon">★</div><h3>Atención personalizada</h3><p>Recibe orientación antes, durante y después de tu inscripción.</p></article>
+          <article class="reveal"><div class="icon">✓</div><h3>Formación práctica</h3><p>Aprende mediante actividades aplicadas a situaciones reales.</p></article>
+          <article class="reveal"><div class="icon">⌚</div><h3>Horarios flexibles</h3><p>Opciones pensadas para estudiantes, trabajadores y emprendedores.</p></article>
+          <article class="reveal"><div class="icon">▣</div><h3>Presencial o virtual</h3><p>Elige la modalidad que se adapte mejor a tu disponibilidad.</p></article>
+          <article class="reveal"><div class="icon">★</div><h3>Atención personalizada</h3><p>Recibe orientación antes, durante y después de tu inscripción.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section promo-section" id="promociones">
-      <div class="container promo-card">
+    <section class="section stats-section">
+      <div class="container stats-grid">
+        <article class="reveal"><strong class="counter" data-target="7">0</strong><span>Cursos principales</span></article>
+        <article class="reveal"><strong class="counter" data-target="2">0</strong><span>Modalidades</span></article>
+        <article class="reveal"><strong class="counter" data-target="100">0</strong><span>% enfoque práctico</span></article>
+        <article class="reveal"><strong class="counter" data-target="1">0</strong><span>Sede en La Paz</span></article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="preguntas">
+      <div class="container faq-layout">
+        <div class="section-heading left reveal">
+          <span class="eyebrow dark">Información rápida</span>
+          <h2>Preguntas frecuentes</h2>
+          <p>Resolvemos las dudas más comunes antes de la inscripción.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Los cursos son presenciales o virtuales?</span><b>+</b></button>
+            <div class="faq-answer"><p>Contamos con opciones presenciales en La Paz y modalidades virtuales, según disponibilidad del curso.</p></div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Cómo puedo reservar un cupo?</span><b>+</b></button>
+            <div class="faq-answer"><p>Completa el formulario o escríbenos por WhatsApp para recibir costos, horarios y requisitos de inscripción.</p></div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Puedo consultar promociones?</span><b>+</b></button>
+            <div class="faq-answer"><p>Sí. Las promociones dependen del curso y la fecha de inicio. Confirma la oferta vigente antes de realizar el pago.</p></div>
+          </article>
+          <article class="faq-item reveal">
+            <button class="faq-question" type="button" aria-expanded="false"><span>¿Necesito experiencia previa?</span><b>+</b></button>
+            <div class="faq-answer"><p>La mayoría de los programas están dirigidos al público en general. Te orientaremos hacia el nivel adecuado.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section promo-section">
+      <div class="container promo-card reveal">
         <div>
           <span class="eyebrow">Promociones vigentes</span>
-          <h2>Consulta por descuentos y cupos disponibles</h2>
-          <p>Las promociones cambian según el curso y la fecha de inicio. Escríbenos para recibir información actualizada.</p>
+          <h2>Consulta descuentos y cupos disponibles</h2>
+          <p>Las promociones pueden variar según el curso y la fecha de inicio.</p>
         </div>
         <a class="btn btn-light" href="#contacto">Consultar ahora</a>
       </div>
@@ -219,18 +297,25 @@
 
     <section class="section" id="contacto">
       <div class="container contact-grid">
-        <div class="contact-copy">
+        <div class="contact-copy reveal">
           <span class="eyebrow dark">Estamos para ayudarte</span>
           <h2>Solicita información</h2>
           <p>Completa el formulario y envía tu consulta directamente al WhatsApp oficial de EGEI.</p>
+
           <div class="contact-data">
             <p><strong>Institución:</strong> Centro de Capacitación Técnica Privada EGEI S.R.L.</p>
             <p><strong>Ciudad:</strong> La Paz, Bolivia</p>
             <p><strong>Modalidad:</strong> Presencial y virtual</p>
+            <p><strong>WhatsApp:</strong> +591 76887684</p>
+          </div>
+
+          <div class="social-links" aria-label="Redes sociales">
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
           </div>
         </div>
 
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form reveal" id="contact-form">
           <label>Nombre
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
           </label>
@@ -263,9 +348,10 @@
         <div><strong>EGEI Digital</strong><span>Capacitación técnica para impulsar tu futuro.</span></div>
       </div>
       <div class="footer-links">
+        <a href="#inicios">Inicios</a>
         <a href="#cursos">Cursos</a>
         <a href="#beneficios">Beneficios</a>
-        <a href="#promociones">Promociones</a>
+        <a href="#preguntas">Preguntas</a>
         <a href="#contacto">Contacto</a>
       </div>
     </div>
@@ -275,7 +361,9 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/59176887684?text=Hola%20EGEI%20Digital%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20cursos." target="_blank" rel="noopener"><span>✆</span><strong>WhatsApp</strong></a>
+  <a class="whatsapp-float" href="https://wa.me/59176887684?text=Hola%20EGEI%20Digital%2C%20deseo%20informaci%C3%B3n%20sobre%20sus%20cursos." target="_blank" rel="noopener noreferrer" aria-label="Escribir a EGEI por WhatsApp">
+    <span aria-hidden="true">✆</span><strong>WhatsApp</strong>
+  </a>
   <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
   <script src="assets/js/main.js"></script>
 </body>

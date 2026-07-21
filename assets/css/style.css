@@ -256,3 +256,77 @@ body.dark .egei-enroll-form,body.dark-theme .egei-enroll-form{color:#fff}
 body.dark .egei-enroll-form input,body.dark .egei-enroll-form select,body.dark .egei-enroll-form textarea,
 body.dark-theme .egei-enroll-form input,body.dark-theme .egei-enroll-form select,body.dark-theme .egei-enroll-form textarea{background:#0b1729;border-color:#2a3a55;color:#fff}
 @media(max-width:760px){.egei-enroll-card{grid-template-columns:1fr}.egei-enroll-copy,.egei-enroll-form{padding:28px}.egei-field-grid{grid-template-columns:1fr}.egei-enroll-form label.full{grid-column:auto}}
+
+/* ===== Versión 8 · Módulo 4: correcciones completas de contraste oscuro ===== */
+body.dark,
+body.dark-theme,
+html[data-theme="dark"] body{
+  --egei-dark-bg:#061126;
+  --egei-dark-surface:#0d1a32;
+  --egei-dark-surface-2:#12213d;
+  --egei-dark-text:#f7f9ff;
+  --egei-dark-muted:#c7d3ea;
+  --egei-dark-border:#2a3d61;
+  background:var(--egei-dark-bg)!important;
+  color:var(--egei-dark-text)!important;
+}
+body.dark h1,body.dark h2,body.dark h3,body.dark h4,body.dark h5,body.dark h6,
+body.dark-theme h1,body.dark-theme h2,body.dark-theme h3,body.dark-theme h4,body.dark-theme h5,body.dark-theme h6,
+html[data-theme="dark"] body h1,html[data-theme="dark"] body h2,html[data-theme="dark"] body h3,
+html[data-theme="dark"] body h4,html[data-theme="dark"] body h5,html[data-theme="dark"] body h6{
+  color:var(--egei-dark-text)!important;
+  text-shadow:none!important;
+}
+body.dark p,body.dark li,body.dark small,body.dark label,body.dark .muted,
+body.dark-theme p,body.dark-theme li,body.dark-theme small,body.dark-theme label,body.dark-theme .muted,
+html[data-theme="dark"] body p,html[data-theme="dark"] body li,html[data-theme="dark"] body small,
+html[data-theme="dark"] body label,html[data-theme="dark"] body .muted{
+  color:var(--egei-dark-muted)!important;
+}
+body.dark .eyebrow,body.dark .section-kicker,body.dark [class*="kicker"],
+body.dark-theme .eyebrow,body.dark-theme .section-kicker,body.dark-theme [class*="kicker"],
+html[data-theme="dark"] body .eyebrow,html[data-theme="dark"] body .section-kicker,
+html[data-theme="dark"] body [class*="kicker"]{
+  color:#76a9ff!important;
+}
+body.dark section,body.dark-theme section,html[data-theme="dark"] body section{
+  color:var(--egei-dark-text);
+}
+body.dark .card,body.dark .course-card,body.dark .news-card,body.dark .stat-card,
+body.dark-theme .card,body.dark-theme .course-card,body.dark-theme .news-card,body.dark-theme .stat-card,
+html[data-theme="dark"] body .card,html[data-theme="dark"] body .course-card,
+html[data-theme="dark"] body .news-card,html[data-theme="dark"] body .stat-card{
+  background:var(--egei-dark-surface)!important;
+  border-color:var(--egei-dark-border)!important;
+  color:var(--egei-dark-text)!important;
+}
+body.dark input,body.dark select,body.dark textarea,
+body.dark-theme input,body.dark-theme select,body.dark-theme textarea,
+html[data-theme="dark"] body input,html[data-theme="dark"] body select,html[data-theme="dark"] body textarea{
+  background:#09152a!important;
+  color:#fff!important;
+  border-color:#34486d!important;
+}
+body.dark input::placeholder,body.dark textarea::placeholder,
+body.dark-theme input::placeholder,body.dark-theme textarea::placeholder,
+html[data-theme="dark"] body input::placeholder,html[data-theme="dark"] body textarea::placeholder{
+  color:#aebbd1!important;
+  opacity:1!important;
+}
+body.dark .stats-strip,body.dark-theme .stats-strip,html[data-theme="dark"] body .stats-strip,
+body.dark [class*="stats"],body.dark-theme [class*="stats"],html[data-theme="dark"] body [class*="stats"]{
+  color:var(--egei-dark-text)!important;
+}
+body.dark .stats-strip strong,body.dark-theme .stats-strip strong,html[data-theme="dark"] body .stats-strip strong{
+  color:#72a8ff!important;
+}
+body.dark .stats-strip span,body.dark-theme .stats-strip span,html[data-theme="dark"] body .stats-strip span{
+  color:#d6e0f4!important;
+}
+body.dark .section-title,body.dark-theme .section-title,html[data-theme="dark"] body .section-title,
+body.dark .section-subtitle,body.dark-theme .section-subtitle,html[data-theme="dark"] body .section-subtitle{
+  color:var(--egei-dark-text)!important;
+}
+body.dark a:not(.btn),body.dark-theme a:not(.btn),html[data-theme="dark"] body a:not(.btn){
+  color:#8bb7ff;
+}

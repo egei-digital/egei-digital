@@ -266,31 +266,112 @@
     </section>
 
     
+
 <section class="v8-section" id="registrations">
-  <div class="v8-module-header">
-    <div><span class="v8-kicker">Módulo 3</span><h2>Preinscripciones</h2><p>Revisa registros, cambia estados, contacta por WhatsApp y exporta a Excel.</p></div>
+  <div class="v8-crm-heading">
+    <div>
+      <span class="v8-kicker">Módulo 4</span>
+      <h2>CRM de estudiantes</h2>
+      <p>Gestiona y da seguimiento profesional a todas las preinscripciones.</p>
+    </div>
     <div class="v8-header-actions">
-      <button class="v8-secondary-btn" id="registration-refresh">↻ Actualizar</button>
-      <button class="v8-primary-btn" id="registration-export">⇩ Exportar Excel/CSV</button>
+      <button class="v8-secondary-btn" id="registration-export">⇩ Exportar CSV</button>
+      <button class="v8-primary-btn" id="crm-new-registration">＋ Nueva preinscripción</button>
     </div>
   </div>
-  <article class="v8-panel">
-    <div class="v8-toolbar v8-toolbar-wrap">
-      <input class="v8-search-input" id="registration-search" placeholder="Buscar por nombre, curso o celular...">
+
+  <div class="v8-crm-metrics">
+    <article><span class="crm-icon">👥</span><div><small>Total de interesados</small><strong id="crm-total">0</strong><p>Todos los registros</p></div></article>
+    <article><span class="crm-icon green">＋</span><div><small>Nuevos</small><strong id="crm-new">0</strong><p>Recién registrados</p></div></article>
+    <article><span class="crm-icon amber">☎</span><div><small>Contactados</small><strong id="crm-contacted">0</strong><p>Ya fueron contactados</p></div></article>
+    <article><span class="crm-icon violet">☆</span><div><small>Reservados</small><strong id="crm-reserved">0</strong><p>Apartaron su cupo</p></div></article>
+    <article><span class="crm-icon blue">🎓</span><div><small>Inscritos</small><strong id="crm-enrolled">0</strong><p>Matriculados</p></div></article>
+    <article><span class="crm-icon green">✓</span><div><small>Finalizados</small><strong id="crm-finished">0</strong><p>Cursos finalizados</p></div></article>
+  </div>
+
+  <article class="v8-panel v8-crm-table-panel">
+    <div class="v8-crm-filters">
+      <input class="v8-search-input" id="registration-search" placeholder="Buscar por nombre, celular o correo...">
+      <select class="v8-filter-select" id="crm-course-filter"><option value="">Todos los cursos</option></select>
+      <select class="v8-filter-select" id="crm-modality-filter"><option value="">Todas las modalidades</option><option>Presencial</option><option>Virtual</option></select>
       <select class="v8-filter-select" id="registration-status-filter">
         <option value="">Todos los estados</option>
         <option>Nuevo</option><option>Contactado</option><option>Reservado</option><option>Inscrito</option><option>Finalizado</option>
       </select>
-      <span class="v8-count" id="registration-count">0 registros</span>
+      <button class="v8-secondary-btn" id="crm-clear-filters">⌁ Limpiar filtros</button>
     </div>
     <div class="v8-table-wrap">
-      <table class="v8-data-table">
-        <thead><tr><th>Fecha</th><th>Estudiante</th><th>Contacto</th><th>Curso</th><th>Modalidad</th><th>Estado</th><th>Sincronización</th><th>Acciones</th></tr></thead>
+      <table class="v8-data-table v8-crm-table">
+        <thead><tr><th>Fecha</th><th>Nombre completo</th><th>Contacto</th><th>Curso</th><th>Modalidad</th><th>Horario</th><th>Estado</th><th>Acciones</th></tr></thead>
         <tbody id="registration-table"></tbody>
       </table>
     </div>
+    <div class="v8-crm-footer">
+      <span id="registration-count">0 registros</span>
+      <div class="v8-pagination">
+        <button id="crm-prev">‹</button><strong id="crm-page">1</strong><button id="crm-next">›</button>
+      </div>
+      <label>Registros por página
+        <select id="crm-page-size"><option>5</option><option>10</option><option>20</option></select>
+      </label>
+    </div>
   </article>
+
+  <div class="v8-crm-bottom-grid">
+    <article class="v8-panel">
+      <div class="v8-panel-head"><div><span class="v8-kicker">Resumen</span><h3>Estadísticas rápidas</h3></div></div>
+      <div class="v8-quick-stats">
+        <div><span>Preinscripciones del día</span><strong id="crm-today">0</strong></div>
+        <div><span>Preinscripciones del mes</span><strong id="crm-month">0</strong></div>
+        <div><span>Tasa de conversión</span><strong id="crm-conversion">0%</strong></div>
+        <div><span>Curso más solicitado</span><strong id="crm-top-course">—</strong></div>
+      </div>
+    </article>
+
+    <article class="v8-panel">
+      <div class="v8-panel-head"><div><span class="v8-kicker">Conversión</span><h3>Estado de interesados</h3></div></div>
+      <div class="v8-funnel-bars" id="crm-funnel"></div>
+    </article>
+
+    <article class="v8-panel">
+      <div class="v8-panel-head"><div><span class="v8-kicker">Gestión</span><h3>Acciones rápidas</h3></div></div>
+      <div class="v8-quick-actions-grid">
+        <button id="crm-message-all">◉ Enviar mensaje masivo</button>
+        <button id="crm-export-all">⇩ Exportar todos</button>
+        <button id="crm-report">▥ Ver reporte detallado</button>
+        <button id="crm-sync">▣ Sincronizar con Excel</button>
+      </div>
+    </article>
+  </div>
+
+  <div class="v8-modal" id="crm-modal" aria-hidden="true">
+    <div class="v8-modal-card">
+      <div class="v8-modal-head">
+        <div><span class="v8-kicker">CRM</span><h3 id="crm-modal-title">Nueva preinscripción</h3></div>
+        <button class="v8-modal-close" data-close-modal>×</button>
+      </div>
+      <form id="crm-form" class="v8-admin-form">
+        <input type="hidden" name="id">
+        <div class="v8-form-grid">
+          <label>Nombre completo<input name="name" required></label>
+          <label>Celular<input name="phone" required></label>
+          <label>Correo<input name="email" type="email"></label>
+          <label>Curso<input name="course" required></label>
+          <label>Modalidad<select name="modality"><option>Presencial</option><option>Virtual</option></select></label>
+          <label>Horario<input name="schedule" placeholder="Ej.: Noche"></label>
+          <label>Estado<select name="status"><option>Nuevo</option><option>Contactado</option><option>Reservado</option><option>Inscrito</option><option>Finalizado</option></select></label>
+          <label>Origen<input name="source" value="Panel administrativo"></label>
+          <label class="full">Observaciones<textarea name="comments" rows="4"></textarea></label>
+        </div>
+        <div class="v8-form-actions">
+          <button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button>
+          <button type="submit" class="v8-primary-btn">Guardar registro</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </section>
+
 
     
 <section class="v8-section" id="settings">
@@ -326,6 +407,6 @@
 <script src="../assets/js/egei-data-service.js"></script>
 <script src="../assets/js/admin-v8.js"></script>
 <script src="../assets/js/admin-v8-module2.js"></script>
-<script src="../assets/js/admin-v8-module3.js"></script>
+<script src="../assets/js/admin-v8-module4.js"></script>
 </body>
 </html>

@@ -1,28 +1,33 @@
-# EGEI Digital — Versión 8 · Módulo 3
+# EGEI Digital — Versión 8 · Módulo 4
 
-## Incorporado
+## Mejoras principales
 
-- Todo el Módulo 1 y Módulo 2.
-- Preinscripción integrada en la página principal mediante ventana emergente.
-- Campos: nombre, celular, correo, curso, modalidad, horario y comentarios.
-- Carga automática de cursos activos guardados en el panel.
-- Registro local inmediato en el navegador.
-- Panel de preinscripciones con búsqueda y filtros.
-- Estados: Nuevo, Contactado, Reservado, Inscrito y Finalizado.
-- Botón directo de WhatsApp.
-- Eliminación de registros.
-- Exportación compatible con Excel mediante CSV.
-- Configuración de endpoint externo.
-- Arquitectura preparada para Power Automate, Excel Online, Firebase o backend propio.
-- Indicador de sincronización por registro.
+### CRM profesional de estudiantes
+- Indicadores de total, nuevos, contactados, reservados, inscritos y finalizados.
+- Búsqueda por nombre, celular, correo o curso.
+- Filtros por curso, modalidad y estado.
+- Paginación.
+- Nueva preinscripción desde el panel.
+- Edición y eliminación de registros.
+- Contacto directo por WhatsApp.
+- Exportación CSV compatible con Excel.
+- Estadísticas del día y del mes.
+- Tasa de conversión.
+- Curso más solicitado.
+- Embudo visual de estados.
+- Acciones rápidas.
 
-## Importante
-
-La conexión real con Excel Online requiere una URL de Power Automate, Microsoft Graph o un backend. No se incluyeron credenciales ni una conexión ficticia. Sin endpoint, el sistema funciona en modo local y guarda los datos en `localStorage`.
-
-Consulta `GUIA-CONEXION-EXCEL.md`.
+### Corrección del modo oscuro
+- Títulos y subtítulos claros.
+- Textos secundarios con contraste mejorado.
+- Corrección de la sección “Próximos inicios”.
+- Corrección de estadísticas, tarjetas, formularios, tablas y placeholders.
+- Bordes y fondos más diferenciados.
+- Mejor legibilidad en móviles.
 
 ## Acceso administrativo
-
 - Usuario: `admin`
 - Contraseña: `egei2026`
+
+## Persistencia
+Los registros continúan almacenándose en `localStorage` hasta configurar una conexión real con Power Automate, Excel Online, Firebase o un backend.

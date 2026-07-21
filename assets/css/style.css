@@ -414,3 +414,37 @@ body.dark-mode .quick-grid{background:#0d1a32!important}.dark-mode .quick-grid s
 body.dark-mode .quick-grid-v2 article,body.dark-mode .agenda-calendar{background:#0d1d35!important;border-color:#2d4569!important}body.dark-mode .quick-grid-v2 .quick-icon,body.dark-mode .agenda-date{background:#17355f!important;color:#dbe8ff!important}body.dark-mode .agenda-toolbar{background:linear-gradient(135deg,#10223d,#171f3b)!important;border-color:#2d4569!important}body.dark-mode .agenda-month-btn{background:#122844!important;color:#e8eef9!important;border-color:#395477!important}body.dark-mode .agenda-month-btn.active{background:#3474df!important;color:#fff!important}body.dark-mode .agenda-item{border-color:#2d4569!important}body.dark-mode .agenda-item:hover{background:#112742!important}body.dark-mode .agenda-copy h4,body.dark-mode .agenda-toolbar h3{color:#f4f7ff!important}body.dark-mode .agenda-copy p,body.dark-mode .agenda-footer p,body.dark-mode .quick-grid-v2 span:last-child{color:#c4d0e5!important}body.dark-mode .agenda-meta span{background:#142d4d!important;color:#cbd7ea!important}body.dark-mode .wa-tooltip{background:#eaf1ff;color:#07194c}
 @media(max-width:760px){.agenda-toolbar,.agenda-footer{align-items:flex-start;flex-direction:column}.agenda-months{justify-content:flex-start}.agenda-item{grid-template-columns:70px 1fr}.agenda-status{grid-column:1/-1;justify-self:start}.agenda-date{min-height:64px}.quick-grid-v2{grid-template-columns:1fr 1fr}.whatsapp-float-v2{right:15px;bottom:18px}.wa-tooltip{display:none}}
 @media(max-width:480px){.quick-grid-v2{grid-template-columns:1fr}.agenda-item{padding:18px}.agenda-toolbar,.agenda-footer{padding:22px}.agenda-month-btn{padding:8px 11px}}
+
+/* Módulo 5.3: ubicación, bloque informativo y WhatsApp accesible */
+.quick-grid-v2 article{min-width:0}
+.quick-grid-v2 article div{min-width:0}
+.quick-grid-v2 article strong{font-size:clamp(.9rem,1.4vw,1.08rem);line-height:1.2;overflow-wrap:anywhere}
+.quick-grid-v2 article span:last-child{line-height:1.25}
+.office-location{background:linear-gradient(180deg,var(--surface),var(--white))}
+.office-location-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:stretch}
+.office-location-copy,.office-map-card{border:1px solid var(--line);border-radius:28px;background:var(--white);box-shadow:0 20px 55px rgba(22,52,104,.1)}
+.office-location-copy{padding:34px}.office-location-copy h2{margin-top:10px}.office-location-copy>p{color:var(--muted)}
+.office-address-card{display:flex;gap:16px;align-items:flex-start;margin:24px 0;padding:20px;border-radius:20px;background:var(--surface);border:1px solid var(--line)}
+.office-address-card strong{display:block;margin-bottom:6px}.office-address-card p{margin:0 0 6px;color:var(--muted);line-height:1.65}.office-address-card span{color:var(--muted);font-size:.85rem}
+.office-pin{display:grid;place-items:center;flex:0 0 46px;width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,var(--navy-2),var(--purple));color:#fff;font-size:1.3rem}
+.office-map-card{padding:18px;min-height:320px}.office-map-visual{position:relative;display:grid;place-content:center;text-align:center;height:100%;min-height:284px;padding:30px;border-radius:22px;overflow:hidden;background:linear-gradient(135deg,#dceaff,#f0e5ff)}
+.office-map-visual:before,.office-map-visual:after{content:"";position:absolute;inset:auto;width:180%;height:2px;background:rgba(34,82,154,.15);transform:rotate(-18deg)}.office-map-visual:after{transform:rotate(24deg)}
+.office-map-dot{position:relative;z-index:1;width:26px;height:26px;margin:0 auto 18px;border:7px solid #fff;border-radius:50%;background:#5c38d9;box-shadow:0 0 0 10px rgba(92,56,217,.15)}
+.office-map-visual strong,.office-map-visual p,.office-map-visual small{position:relative;z-index:1}.office-map-visual p{margin:8px 0;color:#365174}.office-map-visual small{color:#566d8c;font-weight:800}
+.whatsapp-float-v2{color:#fff!important;isolation:isolate;animation:waFloatMove 2.4s ease-in-out infinite;border-color:#fff!important;background:#25d366!important;box-shadow:0 0 0 4px rgba(37,211,102,.18),0 16px 38px rgba(24,154,78,.5)!important}
+.whatsapp-float-v2 svg{position:relative;z-index:2;filter:drop-shadow(0 2px 2px rgba(0,0,0,.22))}
+.whatsapp-float-v2 .wa-pulse{z-index:1}
+@keyframes waFloatMove{0%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-7px) rotate(-3deg)}50%{transform:translateY(-2px) rotate(0)}75%{transform:translateY(-7px) rotate(3deg)}}
+.whatsapp-float-v2:hover{animation-play-state:paused;transform:translateY(-5px) scale(1.07)!important}
+body.dark-mode .office-location{background:linear-gradient(180deg,#08182c,#0a1a30)!important}
+body.dark-mode .office-location-copy,body.dark-mode .office-map-card{background:#0d1d35!important;border-color:#2d4569!important}
+body.dark-mode .office-location-copy h2,body.dark-mode .office-address-card strong{color:#f4f7ff!important}
+body.dark-mode .office-location-copy>p,body.dark-mode .office-address-card p,body.dark-mode .office-address-card span{color:#c4d0e5!important}
+body.dark-mode .office-address-card{background:#122844!important;border-color:#395477!important}
+body.dark-mode .office-map-visual{background:linear-gradient(135deg,#122b4d,#241d46)!important}
+body.dark-mode .office-map-visual strong{color:#f4f7ff!important}body.dark-mode .office-map-visual p,body.dark-mode .office-map-visual small{color:#cbd7ea!important}
+body.dark-mode .whatsapp-float-v2{color:#fff!important;background:#20c75a!important;border-color:#dfffea!important;box-shadow:0 0 0 5px rgba(37,211,102,.22),0 18px 44px rgba(0,0,0,.55)!important}
+body.dark-mode .wa-pulse{border-color:rgba(83,255,142,.72)!important}
+@media(max-width:840px){.office-location-grid{grid-template-columns:1fr}.office-map-card{min-height:260px}.office-map-visual{min-height:224px}}
+@media(max-width:520px){.office-location-copy{padding:24px}.office-address-card{padding:16px}.quick-grid-v2 article strong{font-size:.95rem}}
+@media(prefers-reduced-motion:reduce){.whatsapp-float-v2{animation:none}}

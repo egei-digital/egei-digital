@@ -233,3 +233,26 @@ body.dark-mode .course-card,body.dark-mode .start-card,body.dark-mode .benefits-
 .platform-card{padding:26px;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 28px rgba(7,25,76,.07)}
 @media(max-width:900px){.admin-shell{grid-template-columns:1fr}.admin-card-grid,.platform-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.admin-card-grid,.platform-grid{grid-template-columns:1fr}}
+
+/* ===== Versión 8 · Módulo 3: Preinscripción integrada ===== */
+.egei-enroll-modal{position:fixed;inset:0;display:none;place-items:center;padding:20px;background:rgba(4,12,30,.78);z-index:9999;backdrop-filter:blur(8px)}
+.egei-enroll-modal.open{display:grid}
+.egei-enroll-card{position:relative;display:grid;grid-template-columns:.82fr 1.18fr;width:min(980px,100%);max-height:94vh;overflow:auto;border-radius:26px;background:#fff;box-shadow:0 32px 90px rgba(0,0,0,.35)}
+.egei-enroll-copy{padding:42px;background:linear-gradient(145deg,#071a48,#1557d5);color:#fff}
+.egei-enroll-copy h2{margin:9px 0 13px;font-size:clamp(1.8rem,3vw,3rem);line-height:1.05}
+.egei-enroll-copy p{color:#d9e6ff;line-height:1.65}
+.egei-enroll-points{display:grid;gap:12px;margin-top:28px}.egei-enroll-points span{padding:12px 14px;border:1px solid rgba(255,255,255,.18);border-radius:13px;background:rgba(255,255,255,.08)}
+.egei-enroll-form{padding:42px;color:#17233e}
+.egei-field-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.egei-enroll-form label{display:grid;gap:7px;font-size:.78rem;font-weight:850}
+.egei-enroll-form label.full{grid-column:1/-1}
+.egei-enroll-form input,.egei-enroll-form select,.egei-enroll-form textarea{width:100%;padding:12px 13px;border:1px solid #dfe6f2;border-radius:11px;background:#f9fbff;color:#17233e;font:inherit}
+.egei-consent{display:flex!important;grid-template-columns:auto 1fr!important;align-items:flex-start;gap:9px!important;margin:16px 0;color:#5e6d88;font-weight:600!important}
+.egei-consent input{width:auto!important;margin-top:2px}
+.egei-form-status{min-height:24px;margin-top:12px;font-size:.78rem;font-weight:850}.egei-form-status.success{color:#12805a}.egei-form-status.error{color:#b3261e}
+.egei-enroll-close{position:absolute;right:16px;top:14px;z-index:2;width:38px;height:38px;border:0;border-radius:50%;background:#edf3ff;color:#102044;font-size:1.45rem;cursor:pointer}
+body.dark .egei-enroll-card,body.dark-theme .egei-enroll-card{background:#101c31;color:#fff}
+body.dark .egei-enroll-form,body.dark-theme .egei-enroll-form{color:#fff}
+body.dark .egei-enroll-form input,body.dark .egei-enroll-form select,body.dark .egei-enroll-form textarea,
+body.dark-theme .egei-enroll-form input,body.dark-theme .egei-enroll-form select,body.dark-theme .egei-enroll-form textarea{background:#0b1729;border-color:#2a3a55;color:#fff}
+@media(max-width:760px){.egei-enroll-card{grid-template-columns:1fr}.egei-enroll-copy,.egei-enroll-form{padding:28px}.egei-field-grid{grid-template-columns:1fr}.egei-enroll-form label.full{grid-column:auto}}

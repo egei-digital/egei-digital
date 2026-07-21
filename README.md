@@ -1,26 +1,28 @@
-# EGEI Digital — Versión 8 · Módulo 2
+# EGEI Digital — Versión 8 · Módulo 3
 
-## Funciones incorporadas
-- Todo el Módulo 1: dashboard, reloj de La Paz, menú adaptable y modo oscuro legible.
-- Gestión completa de cursos:
-  - Crear, editar y eliminar.
-  - Precio, duración, modalidad, categoría, imagen y estado.
-- Gestión de próximos inicios:
-  - Curso, fecha, hora, cupos, modalidad y estado.
-- Gestión de banners:
-  - Título, subtítulo, botón, enlace, imagen, expiración y estado.
-- Gestión de noticias:
-  - Publicado o borrador, resumen y contenido.
-- Buscador independiente en cada sección.
-- Contadores automáticos.
-- Formularios emergentes.
-- Confirmación antes de eliminar.
-- Datos guardados localmente en el navegador mediante localStorage.
-- Modo oscuro corregido también en formularios, tablas y ventanas.
+## Incorporado
 
-## Acceso de demostración
-- Usuario: `admin`
-- Contraseña: `egei2026`
+- Todo el Módulo 1 y Módulo 2.
+- Preinscripción integrada en la página principal mediante ventana emergente.
+- Campos: nombre, celular, correo, curso, modalidad, horario y comentarios.
+- Carga automática de cursos activos guardados en el panel.
+- Registro local inmediato en el navegador.
+- Panel de preinscripciones con búsqueda y filtros.
+- Estados: Nuevo, Contactado, Reservado, Inscrito y Finalizado.
+- Botón directo de WhatsApp.
+- Eliminación de registros.
+- Exportación compatible con Excel mediante CSV.
+- Configuración de endpoint externo.
+- Arquitectura preparada para Power Automate, Excel Online, Firebase o backend propio.
+- Indicador de sincronización por registro.
 
 ## Importante
-Este módulo funciona en GitHub Pages sin servidor. Por eso los cambios se guardan en el navegador donde se administran. La sincronización central con Excel Online y la preinscripción integrada se implementarán en el Módulo 3.
+
+La conexión real con Excel Online requiere una URL de Power Automate, Microsoft Graph o un backend. No se incluyeron credenciales ni una conexión ficticia. Sin endpoint, el sistema funciona en modo local y guarda los datos en `localStorage`.
+
+Consulta `GUIA-CONEXION-EXCEL.md`.
+
+## Acceso administrativo
+
+- Usuario: `admin`
+- Contraseña: `egei2026`

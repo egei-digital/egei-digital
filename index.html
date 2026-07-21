@@ -51,7 +51,7 @@
         <a href="#preguntas">Preguntas</a>
         <a href="#blog">Noticias</a>
         <a href="#contacto">Contacto</a><button id="theme-toggle" class="theme-toggle" type="button">◐</button><a href="admin/login.html">Panel</a>
-        <a class="btn btn-small" href="inscripcion.html">Inscríbete</a>
+        <a class="btn btn-small" href="#preinscripcion" data-enroll-open>Inscríbete</a>
       </div>
     </nav>
   </header>
@@ -418,5 +418,55 @@
   </a>
   <button class="back-to-top" type="button" aria-label="Volver arriba">↑</button>
   <script src="assets/js/main.js"></script><script src="assets/js/v7.js"></script>
+
+<div class="egei-enroll-modal" id="egei-enroll-modal" aria-hidden="true">
+  <div class="egei-enroll-card" role="dialog" aria-modal="true" aria-labelledby="egei-enroll-title">
+    <button class="egei-enroll-close" type="button" data-enroll-close aria-label="Cerrar">×</button>
+    <div class="egei-enroll-copy">
+      <span class="eyebrow">Preinscripción rápida</span>
+      <h2 id="egei-enroll-title">Reserva tu cupo en EGEI Digital</h2>
+      <p>Completa tus datos y nuestro equipo se comunicará contigo para confirmar horarios, modalidad y promoción disponible.</p>
+      <div class="egei-enroll-points">
+        <span>✓ Presencial en La Paz</span>
+        <span>✓ Virtual a nivel nacional</span>
+        <span>✓ Respuesta por WhatsApp</span>
+      </div>
+    </div>
+    <form class="egei-enroll-form" id="egei-enroll-form">
+      <div class="egei-field-grid">
+        <label>Nombre completo<input name="name" required autocomplete="name" placeholder="Escribe tu nombre"></label>
+        <label>Celular<input name="phone" required inputmode="tel" autocomplete="tel" placeholder="Ej.: 76887684"></label>
+        <label>Correo electrónico<input name="email" type="email" autocomplete="email" placeholder="correo@ejemplo.com"></label>
+        <label>Curso
+          <select name="course" id="egei-course-select" required>
+            <option value="">Selecciona un curso</option>
+          </select>
+        </label>
+        <label>Modalidad
+          <select name="modality" required>
+            <option value="">Selecciona</option>
+            <option>Presencial</option>
+            <option>Virtual</option>
+          </select>
+        </label>
+        <label>Horario
+          <select name="schedule">
+            <option value="">Por confirmar</option>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+          </select>
+        </label>
+        <label class="full">Comentarios<textarea name="comments" rows="3" placeholder="Indica el horario o curso que te interesa"></textarea></label>
+      </div>
+      <label class="egei-consent"><input type="checkbox" name="consent" required> Autorizo el contacto para recibir información sobre el curso.</label>
+      <button class="btn" type="submit">Enviar preinscripción</button>
+      <div class="egei-form-status" id="egei-form-status" role="status"></div>
+    </form>
+  </div>
+</div>
+<script src="assets/js/egei-data-service.js"></script>
+<script src="assets/js/preinscripcion-v8.js"></script>
+
 </body>
 </html>

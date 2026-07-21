@@ -265,12 +265,67 @@
       </div>
     </section>
 
-    <section class="v8-section" id="registrations"><div class="v8-empty-module"><span>◎</span><h2>Preinscripciones</h2><p>La ventana integrada y la conexión con Excel Online se implementarán en el Módulo 3.</p></div></section>
-    <section class="v8-section" id="settings"><div class="v8-empty-module"><span>⚙</span><h2>Configuración</h2><p>Preferencias visuales, datos institucionales y conexiones externas.</p></div></section>
+    
+<section class="v8-section" id="registrations">
+  <div class="v8-module-header">
+    <div><span class="v8-kicker">Módulo 3</span><h2>Preinscripciones</h2><p>Revisa registros, cambia estados, contacta por WhatsApp y exporta a Excel.</p></div>
+    <div class="v8-header-actions">
+      <button class="v8-secondary-btn" id="registration-refresh">↻ Actualizar</button>
+      <button class="v8-primary-btn" id="registration-export">⇩ Exportar Excel/CSV</button>
+    </div>
+  </div>
+  <article class="v8-panel">
+    <div class="v8-toolbar v8-toolbar-wrap">
+      <input class="v8-search-input" id="registration-search" placeholder="Buscar por nombre, curso o celular...">
+      <select class="v8-filter-select" id="registration-status-filter">
+        <option value="">Todos los estados</option>
+        <option>Nuevo</option><option>Contactado</option><option>Reservado</option><option>Inscrito</option><option>Finalizado</option>
+      </select>
+      <span class="v8-count" id="registration-count">0 registros</span>
+    </div>
+    <div class="v8-table-wrap">
+      <table class="v8-data-table">
+        <thead><tr><th>Fecha</th><th>Estudiante</th><th>Contacto</th><th>Curso</th><th>Modalidad</th><th>Estado</th><th>Sincronización</th><th>Acciones</th></tr></thead>
+        <tbody id="registration-table"></tbody>
+      </table>
+    </div>
+  </article>
+</section>
+
+    
+<section class="v8-section" id="settings">
+  <div class="v8-module-header"><div><span class="v8-kicker">Módulo 3</span><h2>Configuración de sincronización</h2><p>Conecta el formulario con un servicio externo que escriba en Excel Online o Firebase.</p></div></div>
+  <div class="v8-dashboard-grid">
+    <article class="v8-panel">
+      <div class="v8-panel-head"><div><span class="v8-kicker">Excel Online / Power Automate</span><h3>URL del servicio</h3></div></div>
+      <form id="sync-settings-form" class="v8-admin-form v8-settings-form">
+        <label>Endpoint o webhook
+          <input id="sync-endpoint" type="url" placeholder="https://...">
+        </label>
+        <p class="v8-help-text">La URL debe aceptar solicitudes POST en formato JSON. Puede ser un flujo de Power Automate, una función de Firebase o un servicio similar.</p>
+        <button class="v8-primary-btn" type="submit">Guardar conexión</button>
+      </form>
+    </article>
+    <article class="v8-panel">
+      <div class="v8-panel-head"><div><span class="v8-kicker">Estado actual</span><h3>Conexión</h3></div></div>
+      <div class="v8-connection-card">
+        <span id="sync-indicator" class="v8-connection-dot"></span>
+        <div><strong id="sync-status-title">Modo local</strong><p id="sync-status-text">Los registros se guardan en este navegador.</p></div>
+      </div>
+      <div class="v8-config-note">
+        <strong>Importante</strong>
+        <p>GitHub Pages no puede escribir directamente en un archivo Excel. Se necesita Power Automate, Microsoft Graph, Firebase o un backend intermedio.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
   </main>
 </div>
 <div class="v8-toast" id="admin-toast"></div>
+<script src="../assets/js/egei-data-service.js"></script>
 <script src="../assets/js/admin-v8.js"></script>
 <script src="../assets/js/admin-v8-module2.js"></script>
+<script src="../assets/js/admin-v8-module3.js"></script>
 </body>
 </html>

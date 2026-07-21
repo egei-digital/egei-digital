@@ -84,3 +84,16 @@ body.v8-dark .v8-status-pill{background:#153b30;color:#8ce0ba}
 body.v8-dark .v8-status-pill.inactive,body.v8-dark .v8-status-pill.draft,body.v8-dark .v8-status-pill.complete{background:#26344c;color:#d5deed}
 body.v8-dark .v8-status-pill.warning{background:#4a3711;color:#ffd477}
 @media(max-width:760px){.v8-module-header{align-items:flex-start;flex-direction:column}.v8-form-grid{grid-template-columns:1fr}.v8-admin-form label.full{grid-column:auto}.v8-toolbar{align-items:flex-start;flex-direction:column}.v8-search-input{width:100%}}
+
+/* ===== Versión 8 · Módulo 3 ===== */
+.v8-header-actions{display:flex;gap:10px;flex-wrap:wrap}
+.v8-toolbar-wrap{flex-wrap:wrap}.v8-filter-select,.v8-inline-select{padding:10px 12px;border:1px solid var(--v8-line);border-radius:11px;background:var(--v8-card);color:var(--v8-text)}
+.v8-inline-select{padding:7px 9px;min-width:115px}.v8-action-link{display:inline-flex;align-items:center;padding:7px 9px;border-radius:9px;background:#e8f8f1;color:#117a50;text-decoration:none;font-size:.72rem;font-weight:900}
+.v8-settings-form{padding:20px 0 0}.v8-settings-form label{display:grid;gap:8px}.v8-help-text,.v8-config-note p{color:var(--v8-muted);font-size:.78rem;line-height:1.6}
+.v8-connection-card{display:flex;align-items:center;gap:14px;margin-top:22px;padding:18px;border:1px solid var(--v8-line);border-radius:15px;background:var(--v8-bg)}
+.v8-connection-card p{margin:5px 0 0;color:var(--v8-muted);font-size:.75rem}.v8-connection-dot{width:14px;height:14px;border-radius:50%;background:#f3a712;box-shadow:0 0 0 6px rgba(243,167,18,.14)}
+.v8-connection-dot.connected{background:#16a269;box-shadow:0 0 0 6px rgba(22,162,105,.14)}
+.v8-config-note{margin-top:18px;padding:16px;border-left:4px solid #4d8df6;border-radius:10px;background:var(--v8-bg)}
+body.v8-dark .v8-filter-select,body.v8-dark .v8-inline-select{background:#0c1729;color:#fff}
+body.v8-dark .v8-action-link{background:#153b30;color:#8ce0ba}
+@media(max-width:760px){.v8-header-actions{width:100%}.v8-header-actions button{flex:1}.v8-filter-select{width:100%}}

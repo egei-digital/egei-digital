@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panel administrativo | EGEI Digital</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="portal-shell">
+<header class="portal-header"><div class="container">
+<a class="portal-brand" href="../index.html"><img src="../assets/images/branding/logo-egei.png" alt="EGEI">Panel EGEI</a>
+<a class="btn btn-small" href="../index.html">Ver sitio</a>
+</div></header>
+<main class="portal-main"><div class="container">
+<div class="section-heading left"><span class="eyebrow dark">Administración local</span><h1>Panel de gestión</h1>
+<p>Gestiona solicitudes y noticias guardadas en este navegador.</p></div>
+<div class="portal-note">Este panel es una demostración funcional con almacenamiento local. GitHub Pages no incluye una base de datos. Para uso real en varios dispositivos se debe conectar Firebase.</div>
+<div class="dashboard-grid">
+<article class="metric-card"><strong id="metric-registrations">0</strong><span>Preinscripciones</span></article>
+<article class="metric-card"><strong id="metric-news">0</strong><span>Noticias creadas</span></article>
+<article class="metric-card"><strong>7</strong><span>Cursos activos</span></article>
+</div>
+<div class="admin-layout">
+<section class="panel-card">
+<h2>Publicar noticia</h2>
+<form class="admin-form" id="news-form">
+<label>Título<input id="news-title" required></label>
+<label>Fecha<input id="news-date" type="date" required></label>
+<label>Resumen<textarea id="news-summary" rows="4" required></textarea></label>
+<button class="btn" type="submit">Guardar noticia</button>
+</form>
+</section>
+<section class="panel-card">
+<h2>Noticias guardadas</h2>
+<div id="news-list"></div>
+</section>
+</div>
+<section class="panel-card" style="margin-top:24px">
+<h2>Preinscripciones recibidas</h2>
+<div style="overflow:auto"><table class="data-table"><thead><tr><th>Nombre</th><th>Celular</th><th>Curso</th><th>Modalidad</th><th>Fecha</th></tr></thead><tbody id="registration-table"></tbody></table></div>
+</section>
+</div></main>
+<script src="../assets/js/admin.js"></script>
+</body></html>

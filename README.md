@@ -1,19 +1,39 @@
-# EGEI Digital — Versión 4
+# EGEI Digital — Versión 6
 
-Sitio web institucional para GitHub Pages.
+Versión avanzada para GitHub Pages.
 
-Incluye:
-- Banner automático.
-- Próximos inicios.
+## Incluye
+
+- Sitio institucional completo.
+- SEO con datos estructurados.
+- Formulario de preinscripción.
+- Panel administrativo local.
+- Gestión local de noticias.
+- Visualización local de preinscripciones.
+- Blog y noticias.
+- Reservas por WhatsApp.
+- Preparación para Firebase.
 - Buscador y filtros de cursos.
-- Animaciones al desplazarse.
-- Contadores.
-- Preguntas frecuentes.
-- WhatsApp flotante y formulario.
-- Facebook e Instagram como redes disponibles.
-- Sin opiniones, logos de empresas, YouTube ni TikTok.
+- Animaciones, FAQ y diseño adaptable.
 
-Antes de publicar:
-1. Actualiza las fechas de inicio en `index.html`.
-2. Reemplaza los enlaces `#` de Facebook e Instagram por las direcciones oficiales.
-3. Sube todo el contenido al repositorio y confirma con `Commit changes`.
+## No incluye
+
+- Certificados digitales.
+- Descarga de material.
+- Opiniones.
+- Logos de empresas.
+- YouTube o TikTok.
+
+## Importante
+
+GitHub Pages solo aloja archivos estáticos. El panel funciona con `localStorage`, por lo que los datos se guardan únicamente en el navegador donde se registraron.
+
+Para que las solicitudes se guarden en una base de datos central y puedan verse desde cualquier equipo, debes conectar Firebase usando:
+
+`assets/js/firebase-config.js`
+
+## Accesos
+
+- Sitio principal: `index.html`
+- Preinscripción: `inscripcion.html`
+- Panel: `admin/index.html`

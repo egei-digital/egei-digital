@@ -1,0 +1,65 @@
+[
+  {
+    "id": "excel",
+    "name": "Microsoft Excel",
+    "category": "Digital",
+    "duration": "1 mes",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/excel.webp",
+    "status": "Inscripciones abiertas"
+  },
+  {
+    "id": "office",
+    "name": "Microsoft Office",
+    "category": "Digital",
+    "duration": "Programa completo",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/office.webp",
+    "status": "Inscripciones abiertas"
+  },
+  {
+    "id": "diseno",
+    "name": "Diseño Gráfico",
+    "category": "Digital",
+    "duration": "Programa creativo",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/diseno-grafico.webp",
+    "status": "Próximo inicio"
+  },
+  {
+    "id": "redes",
+    "name": "Redes Sociales",
+    "category": "Digital",
+    "duration": "1 mes",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/redes-sociales.webp",
+    "status": "Últimos cupos"
+  },
+  {
+    "id": "comercio",
+    "name": "Comercio Exterior",
+    "category": "Administrativo",
+    "duration": "4 meses",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/comercio-exterior.webp",
+    "status": "Inscripciones abiertas"
+  },
+  {
+    "id": "ensamblaje",
+    "name": "Ensamblaje de Computadoras",
+    "category": "Técnico",
+    "duration": "1 mes",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/ensamblaje.webp",
+    "status": "Próximo inicio"
+  },
+  {
+    "id": "secretariado",
+    "name": "Secretariado Comercial",
+    "category": "Administrativo",
+    "duration": "1 mes",
+    "modality": "Presencial o virtual",
+    "image": "assets/images/cursos/secretariado.webp",
+    "status": "Inscripciones abiertas"
+  }
+]

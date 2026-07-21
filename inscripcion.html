@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Inscripción | EGEI Digital</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="portal-shell">
+<header class="portal-header"><div class="container">
+<a class="portal-brand" href="index.html"><img src="assets/images/branding/logo-egei.png" alt="EGEI">EGEI Digital</a>
+<a class="btn btn-small" href="index.html">Volver al sitio</a>
+</div></header>
+<main class="portal-main">
+<div class="container contact-grid">
+<section>
+<span class="eyebrow dark">Reserva en línea</span>
+<h1>Formulario de preinscripción</h1>
+<p>Completa tus datos. La solicitud se guarda en este navegador y también puede enviarse por WhatsApp.</p>
+<div class="portal-note">Esta versión funciona en modo local. Para guardar solicitudes de todos los visitantes en una base de datos central, conecta Firebase desde el archivo <code>assets/js/firebase-config.js</code>.</div>
+</section>
+<form class="contact-form" id="registration-form">
+<label>Nombre completo<input id="reg-name" required></label>
+<label>Celular<input id="reg-phone" type="tel" required></label>
+<label>Correo electrónico<input id="reg-email" type="email"></label>
+<label>Curso<select id="reg-course" required><option value="">Selecciona</option>
+<option>Microsoft Excel</option><option>Microsoft Office</option><option>Diseño Gráfico</option>
+<option>Redes Sociales</option><option>Comercio Exterior</option><option>Ensamblaje de Computadoras</option>
+<option>Secretariado Comercial Administrativo</option></select></label>
+<label>Modalidad<select id="reg-modality"><option>Presencial</option><option>Virtual</option></select></label>
+<label>Observaciones<textarea id="reg-notes" rows="4"></textarea></label>
+<button class="btn" type="submit">Guardar y enviar por WhatsApp</button>
+<small id="registration-status"></small>
+</form>
+</div>
+</main>
+<script src="assets/js/registration.js"></script>
+</body></html>

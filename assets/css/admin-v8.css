@@ -126,3 +126,16 @@ body.v8-dark .v8-crm-table th{color:#cad6eb!important}body.v8-dark .v8-crm-table
 body.v8-dark .v8-crm-filters input,body.v8-dark .v8-crm-filters select,body.v8-dark .v8-crm-footer select{background:#081529!important;color:#fff!important;border-color:#304462!important}
 @media(max-width:1250px){.v8-crm-metrics{grid-template-columns:repeat(3,1fr)}.v8-crm-filters{grid-template-columns:1fr 1fr 1fr}.v8-crm-filters .v8-search-input{grid-column:1/-1}.v8-crm-bottom-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.v8-crm-heading{align-items:flex-start;flex-direction:column}.v8-crm-metrics{grid-template-columns:1fr 1fr}.v8-crm-filters{grid-template-columns:1fr}.v8-crm-filters .v8-search-input{grid-column:auto}.v8-crm-footer{align-items:flex-start;flex-direction:column}.v8-quick-actions-grid{grid-template-columns:1fr}.v8-funnel-row{grid-template-columns:90px 1fr 45px}}
+
+/* ===== Versión 8 · Módulo 5 ===== */
+.v8-import-label{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border:1px solid var(--v8-line);border-radius:12px;background:var(--v8-card);color:var(--v8-text);font-weight:850;cursor:pointer}
+.v8-color-chip{display:inline-flex;align-items:center;gap:8px}.v8-color-chip i{width:18px;height:18px;border-radius:6px;border:1px solid rgba(255,255,255,.3)}
+.v8-report-form{padding:18px 0 0}.v8-report-summary{display:grid;gap:15px;margin-top:18px}.v8-report-summary div{display:flex;justify-content:space-between;gap:18px;padding:14px;border:1px solid var(--v8-line);border-radius:12px;background:var(--v8-bg)}.v8-report-summary span{color:var(--v8-muted)}.v8-report-summary strong{color:var(--v8-text)}
+.v8-report-preview{margin-top:18px}.v8-section#students .v8-crm-filters{grid-template-columns:2fr 1fr 1fr auto}
+body.v8-dark .v8-import-label,body.v8-dark .v8-report-summary div{background:#0b172b;color:#fff;border-color:#2d4163}
+@media print{
+  .v8-sidebar,.v8-topbar,.v8-module-header,.v8-dashboard-grid,.v8-nav,.v8-crm-heading,.v8-crm-filters,.v8-crm-footer,.v8-toast{display:none!important}
+  .v8-main{margin:0!important;padding:0!important}.v8-section{display:none!important}.v8-section#reports{display:block!important}.v8-report-preview{box-shadow:none!important;border:0!important}
+  body{background:#fff!important;color:#000!important}
+}
+@media(max-width:900px){.v8-section#students .v8-crm-filters{grid-template-columns:1fr}.v8-header-actions{width:100%}.v8-import-label{flex:1}}

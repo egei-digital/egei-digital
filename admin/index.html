@@ -23,6 +23,8 @@
       <button class="v8-nav-item" data-section="banners"><span>▧</span><b>Banners</b></button>
       <button class="v8-nav-item" data-section="news"><span>✦</span><b>Noticias</b></button>
       <button class="v8-nav-item" data-section="registrations"><span>◎</span><b>Preinscripciones</b></button>
+      <button class="v8-nav-item" data-section="students"><span>👥</span><b>Estudiantes</b></button>
+      <button class="v8-nav-item" data-section="reports"><span>▥</span><b>Reportes</b></button>
       <button class="v8-nav-item" data-section="settings"><span>⚙</span><b>Configuración</b></button>
     </nav>
 
@@ -68,9 +70,9 @@
 
       <div class="v8-metrics">
         <article class="v8-metric"><span class="v8-metric-icon">◎</span><div><small>Preinscripciones</small><strong id="metric-registrations">0</strong><em>Registros guardados</em></div></article>
-        <article class="v8-metric"><span class="v8-metric-icon">▤</span><div><small>Cursos activos</small><strong id="metric-courses">7</strong><em>Oferta académica</em></div></article>
+        <article class="v8-metric"><span class="v8-metric-icon">▤</span><div><small>Cursos disponibles</small><strong id="metric-courses">7</strong><em>Oferta académica</em></div></article>
         <article class="v8-metric"><span class="v8-metric-icon">▣</span><div><small>Próximos inicios</small><strong id="metric-starts">3</strong><em>Fechas programadas</em></div></article>
-        <article class="v8-metric"><span class="v8-metric-icon">✦</span><div><small>Noticias</small><strong id="metric-news">0</strong><em>Publicaciones</em></div></article>
+        <article class="v8-metric"><span class="v8-metric-icon">✦</span><div><small>Noticias publicadas</small><strong id="metric-news">0</strong><em>Publicaciones</em></div></article>
       </div>
 
       <div class="v8-dashboard-grid">
@@ -104,7 +106,7 @@
           <div class="v8-session-info">
             <div><span>Usuario</span><strong>Administrador</strong></div>
             <div><span>Zona horaria</span><strong>America/La_Paz</strong></div>
-            <div><span>Versión</span><strong>8 · Módulo 1</strong></div>
+            <div><span>Versión</span><strong>8 · Módulo 5</strong></div>
             <div><span>Último acceso</span><strong id="last-access">Ahora</strong></div>
           </div>
         </article>
@@ -112,82 +114,83 @@
     </section>
 
     
-    <section class="v8-section" id="courses">
-      <div class="v8-module-header">
-        <div><span class="v8-kicker">Módulo 2</span><h2>Gestión de cursos</h2><p>Crea, edita, activa o desactiva la oferta académica.</p></div>
-        <button class="v8-primary-btn" data-open-modal="courses-modal">＋ Agregar</button>
-      </div>
-      <article class="v8-panel">
-        <div class="v8-toolbar">
-          <input class="v8-search-input" id="courses-search" placeholder="Buscar...">
-          <span class="v8-count" id="courses-count">0 registros</span>
+    
+<section class="v8-section" id="courses">
+  <div class="v8-module-header">
+    <div><span class="v8-kicker">Módulo 5</span><h2>Gestión de cursos</h2><p>Administra la información comercial de cada curso.</p></div>
+    <button class="v8-primary-btn" data-open-modal="courses-modal">＋ Agregar curso</button>
+  </div>
+  <article class="v8-panel">
+    <div class="v8-toolbar">
+      <input class="v8-search-input" id="courses-search" placeholder="Buscar curso...">
+      <span class="v8-count" id="courses-count">0 registros</span>
+    </div>
+    <div class="v8-table-wrap">
+      <table class="v8-data-table">
+        <thead><tr><th>Curso</th><th>Duración</th><th>Precio</th><th>Descuento</th><th>Cupos disponibles</th><th>Acciones</th></tr></thead>
+        <tbody id="courses-table"></tbody>
+      </table>
+    </div>
+  </article>
+  <div class="v8-modal" id="courses-modal" aria-hidden="true">
+    <div class="v8-modal-card">
+      <div class="v8-modal-head"><div><span class="v8-kicker">Curso</span><h3 id="courses-modal-title">Nuevo curso</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
+      <form id="courses-form" class="v8-admin-form">
+        <input type="hidden" name="id">
+        <div class="v8-form-grid">
+          <label class="full">Nombre del curso<input name="name" required></label>
+          <label>Duración<input name="duration" placeholder="Ej.: 1 mes"></label>
+          <label>Precio<input name="price" type="number" min="0" placeholder="230"></label>
+          <label>Descuento (%)<input name="discount" type="number" min="0" max="100" value="0"></label>
+          <label>Cupos disponibles<input name="spots" type="number" min="0" value="20"></label>
+          <label class="full">Imagen o ruta<input name="image" placeholder="assets/images/cursos/excel.webp"></label>
+          <label class="full">Descripción<textarea name="description" rows="4"></textarea></label>
         </div>
-        <div class="v8-table-wrap">
-          <table class="v8-data-table">
-            <thead><tr><th>Curso</th><th>Categoría</th><th>Precio</th><th>Modalidad</th><th>Estado</th><th>Acciones</th></tr></thead>
-            <tbody id="courses-table"></tbody>
-          </table>
-        </div>
-      </article>
-      <div class="v8-modal" id="courses-modal" aria-hidden="true">
-        <div class="v8-modal-card">
-          <div class="v8-modal-head"><div><span class="v8-kicker">Formulario</span><h3 id="courses-modal-title">Nuevo registro</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
-          <form id="courses-form" class="v8-admin-form">
-            <input type="hidden" name="id">
-            
-<div class="v8-form-grid">
-<label>Nombre del curso<input name="name" required></label>
-<label>Categoría<select name="category" required><option>Informática</option><option>Administración</option><option>Diseño</option><option>Marketing</option><option>Comercio</option></select></label>
-<label>Precio promocional<input name="price" type="number" min="0" placeholder="230"></label>
-<label>Duración<input name="duration" placeholder="1 mes"></label>
-<label>Modalidad<select name="modality"><option>Presencial y Virtual</option><option>Presencial</option><option>Virtual</option></select></label>
-<label>Estado<select name="status"><option>Activo</option><option>Inactivo</option></select></label>
-<label class="full">Imagen o ruta<input name="image" placeholder="assets/images/cursos/excel.webp"></label>
-<label class="full">Descripción<textarea name="description" rows="4"></textarea></label>
-</div>
-            <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar</button></div>
-          </form>
-        </div>
-      </div>
-    </section>
+        <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar curso</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
     
-    <section class="v8-section" id="starts">
-      <div class="v8-module-header">
-        <div><span class="v8-kicker">Módulo 2</span><h2>Próximos inicios</h2><p>Administra fechas, horarios, cupos y estados de cada grupo.</p></div>
-        <button class="v8-primary-btn" data-open-modal="starts-modal">＋ Agregar</button>
-      </div>
-      <article class="v8-panel">
-        <div class="v8-toolbar">
-          <input class="v8-search-input" id="starts-search" placeholder="Buscar...">
-          <span class="v8-count" id="starts-count">0 registros</span>
+    
+<section class="v8-section" id="starts">
+  <div class="v8-module-header">
+    <div><span class="v8-kicker">Módulo 5</span><h2>Próximos inicios</h2><p>Administra fechas, horarios, modalidad, cupos y color de cada tarjeta.</p></div>
+    <button class="v8-primary-btn" data-open-modal="starts-modal">＋ Agregar inicio</button>
+  </div>
+  <article class="v8-panel">
+    <div class="v8-toolbar">
+      <input class="v8-search-input" id="starts-search" placeholder="Buscar inicio...">
+      <span class="v8-count" id="starts-count">0 registros</span>
+    </div>
+    <div class="v8-table-wrap">
+      <table class="v8-data-table">
+        <thead><tr><th>Curso</th><th>Fecha</th><th>Hora</th><th>Modalidad</th><th>Cupos</th><th>Color</th><th>Acciones</th></tr></thead>
+        <tbody id="starts-table"></tbody>
+      </table>
+    </div>
+  </article>
+  <div class="v8-modal" id="starts-modal" aria-hidden="true">
+    <div class="v8-modal-card">
+      <div class="v8-modal-head"><div><span class="v8-kicker">Inicio</span><h3 id="starts-modal-title">Nuevo inicio</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
+      <form id="starts-form" class="v8-admin-form">
+        <input type="hidden" name="id">
+        <div class="v8-form-grid">
+          <label class="full">Curso<input name="course" required></label>
+          <label>Fecha<input name="date" type="date" required></label>
+          <label>Hora<input name="time" type="time"></label>
+          <label>Modalidad<select name="modality"><option>Presencial y Virtual</option><option>Presencial</option><option>Virtual</option></select></label>
+          <label>Cupos<input name="spots" type="number" min="0" value="20"></label>
+          <label>Color de tarjeta<input name="color" type="color" value="#1557d5"></label>
         </div>
-        <div class="v8-table-wrap">
-          <table class="v8-data-table">
-            <thead><tr><th>Curso</th><th>Fecha</th><th>Hora</th><th>Cupos</th><th>Estado</th><th>Acciones</th></tr></thead>
-            <tbody id="starts-table"></tbody>
-          </table>
-        </div>
-      </article>
-      <div class="v8-modal" id="starts-modal" aria-hidden="true">
-        <div class="v8-modal-card">
-          <div class="v8-modal-head"><div><span class="v8-kicker">Formulario</span><h3 id="starts-modal-title">Nuevo registro</h3></div><button class="v8-modal-close" data-close-modal>×</button></div>
-          <form id="starts-form" class="v8-admin-form">
-            <input type="hidden" name="id">
-            
-<div class="v8-form-grid">
-<label>Curso<input name="course" required></label>
-<label>Fecha<input name="date" type="date" required></label>
-<label>Hora<input name="time" type="time"></label>
-<label>Cupos<input name="spots" type="number" min="0" value="20"></label>
-<label>Modalidad<select name="modality"><option>Presencial y Virtual</option><option>Presencial</option><option>Virtual</option></select></label>
-<label>Estado<select name="status"><option>Inscripciones abiertas</option><option>Últimos cupos</option><option>Completo</option></select></label>
-</div>
-            <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar</button></div>
-          </form>
-        </div>
-      </div>
-    </section>
+        <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-close-modal>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar inicio</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 
     
     <section class="v8-section" id="banners">
@@ -374,32 +377,127 @@
 
 
     
-<section class="v8-section" id="settings">
-  <div class="v8-module-header"><div><span class="v8-kicker">Módulo 3</span><h2>Configuración de sincronización</h2><p>Conecta el formulario con un servicio externo que escriba en Excel Online o Firebase.</p></div></div>
+
+<section class="v8-section" id="students">
+  <div class="v8-module-header">
+    <div><span class="v8-kicker">Módulo 5</span><h2>Gestión de estudiantes</h2><p>Organiza a los estudiantes confirmados y su información principal.</p></div>
+    <div class="v8-header-actions">
+      <label class="v8-import-label">⇧ Importar CSV<input id="students-import" type="file" accept=".csv,text/csv" hidden></label>
+      <button class="v8-secondary-btn" id="students-export">⇩ Exportar CSV</button>
+      <button class="v8-primary-btn" id="student-new">＋ Nuevo estudiante</button>
+    </div>
+  </div>
+  <article class="v8-panel">
+    <div class="v8-crm-filters">
+      <input class="v8-search-input" id="student-search" placeholder="Buscar por nombre, celular, correo o curso...">
+      <select class="v8-filter-select" id="student-course-filter"><option value="">Todos los cursos</option></select>
+      <select class="v8-filter-select" id="student-modality-filter"><option value="">Todas las modalidades</option><option>Presencial</option><option>Virtual</option></select>
+      <button class="v8-secondary-btn" id="student-clear">Limpiar</button>
+    </div>
+    <div class="v8-table-wrap">
+      <table class="v8-data-table">
+        <thead><tr><th>Estudiante</th><th>Contacto</th><th>Curso</th><th>Modalidad</th><th>Fecha de inscripción</th><th>Observaciones</th><th>Acciones</th></tr></thead>
+        <tbody id="students-table"></tbody>
+      </table>
+    </div>
+    <div class="v8-crm-footer"><span id="students-count">0 estudiantes</span></div>
+  </article>
+  <div class="v8-modal" id="student-modal" aria-hidden="true">
+    <div class="v8-modal-card">
+      <div class="v8-modal-head"><div><span class="v8-kicker">Estudiante</span><h3 id="student-modal-title">Nuevo estudiante</h3></div><button class="v8-modal-close" data-student-close>×</button></div>
+      <form id="student-form" class="v8-admin-form">
+        <input type="hidden" name="id">
+        <div class="v8-form-grid">
+          <label>Nombre completo<input name="name" required></label>
+          <label>Celular<input name="phone" required></label>
+          <label>Correo<input name="email" type="email"></label>
+          <label>Curso<input name="course" required></label>
+          <label>Modalidad<select name="modality"><option>Presencial</option><option>Virtual</option></select></label>
+          <label>Fecha de inscripción<input name="enrollmentDate" type="date" required></label>
+          <label class="full">Observaciones<textarea name="notes" rows="4"></textarea></label>
+        </div>
+        <div class="v8-form-actions"><button type="button" class="v8-secondary-btn" data-student-close>Cancelar</button><button type="submit" class="v8-primary-btn">Guardar estudiante</button></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<section class="v8-section" id="reports">
+  <div class="v8-module-header">
+    <div><span class="v8-kicker">Módulo 5</span><h2>Reportes</h2><p>Genera reportes filtrados de preinscripciones y estudiantes.</p></div>
+  </div>
   <div class="v8-dashboard-grid">
     <article class="v8-panel">
-      <div class="v8-panel-head"><div><span class="v8-kicker">Excel Online / Power Automate</span><h3>URL del servicio</h3></div></div>
-      <form id="sync-settings-form" class="v8-admin-form v8-settings-form">
-        <label>Endpoint o webhook
-          <input id="sync-endpoint" type="url" placeholder="https://...">
-        </label>
-        <p class="v8-help-text">La URL debe aceptar solicitudes POST en formato JSON. Puede ser un flujo de Power Automate, una función de Firebase o un servicio similar.</p>
-        <button class="v8-primary-btn" type="submit">Guardar conexión</button>
+      <div class="v8-panel-head"><div><span class="v8-kicker">Filtros</span><h3>Preparar reporte</h3></div></div>
+      <form id="report-form" class="v8-admin-form v8-report-form">
+        <div class="v8-form-grid">
+          <label>Origen<select name="source"><option value="registrations">Preinscripciones</option><option value="students">Estudiantes</option></select></label>
+          <label>Curso<input name="course" placeholder="Todos"></label>
+          <label>Modalidad<select name="modality"><option value="">Todas</option><option>Presencial</option><option>Virtual</option></select></label>
+          <label>Estado<select name="status"><option value="">Todos</option><option>Nuevo</option><option>Contactado</option><option>Reservado</option><option>Inscrito</option><option>Finalizado</option></select></label>
+          <label>Desde<input name="from" type="date"></label>
+          <label>Hasta<input name="to" type="date"></label>
+        </div>
+        <div class="v8-form-actions">
+          <button type="button" class="v8-secondary-btn" id="report-preview">Vista previa</button>
+          <button type="button" class="v8-secondary-btn" id="report-print">Guardar como PDF</button>
+          <button type="submit" class="v8-primary-btn">Exportar CSV</button>
+        </div>
       </form>
     </article>
     <article class="v8-panel">
-      <div class="v8-panel-head"><div><span class="v8-kicker">Estado actual</span><h3>Conexión</h3></div></div>
+      <div class="v8-panel-head"><div><span class="v8-kicker">Resumen</span><h3>Resultado del filtro</h3></div></div>
+      <div class="v8-report-summary">
+        <div><span>Registros encontrados</span><strong id="report-total">0</strong></div>
+        <div><span>Curso más frecuente</span><strong id="report-top-course">—</strong></div>
+        <div><span>Modalidad principal</span><strong id="report-top-modality">—</strong></div>
+      </div>
+    </article>
+  </div>
+  <article class="v8-panel v8-report-preview">
+    <div class="v8-panel-head"><div><span class="v8-kicker">Vista previa</span><h3>Datos del reporte</h3></div></div>
+    <div class="v8-table-wrap"><table class="v8-data-table"><thead id="report-head"></thead><tbody id="report-body"></tbody></table></div>
+  </article>
+</section>
+
+
+<section class="v8-section" id="settings">
+  <div class="v8-module-header"><div><span class="v8-kicker">Módulo 5</span><h2>Configuración institucional</h2><p>Edita los datos principales de Fundación EGEI Digital.</p></div></div>
+  <div class="v8-dashboard-grid">
+    <article class="v8-panel">
+      <form id="institution-form" class="v8-admin-form">
+        <div class="v8-form-grid">
+          <label class="full">Nombre institucional<input name="institution" value="Fundación EGEI Digital"></label>
+          <label>WhatsApp<input name="whatsapp" value="59176887684"></label>
+          <label>Correo<input name="email" type="email" placeholder="contacto@egeidigital.com"></label>
+          <label class="full">Dirección<input name="address" value="Av. 16 de Julio, La Paz"></label>
+          <label>Horario de atención<input name="hours" value="Lunes a sábado"></label>
+          <label>Facebook<input name="facebook" placeholder="https://facebook.com/..."></label>
+          <label>Instagram<input name="instagram" placeholder="https://instagram.com/..."></label>
+          <label>Logo o ruta<input name="logo" value="assets/images/branding/logo-egei.png"></label>
+          <label>Favicon o ruta<input name="favicon" placeholder="assets/images/branding/favicon.png"></label>
+          <label>Color principal<input name="primaryColor" type="color" value="#1557d5"></label>
+          <label>Color secundario<input name="secondaryColor" type="color" value="#071a48"></label>
+        </div>
+        <div class="v8-form-actions"><button class="v8-primary-btn" type="submit">Guardar configuración</button></div>
+      </form>
+    </article>
+    <article class="v8-panel">
+      <div class="v8-panel-head"><div><span class="v8-kicker">Integración</span><h3>Excel Online / Power Automate</h3></div></div>
+      <form id="sync-settings-form" class="v8-admin-form v8-settings-form">
+        <label>Endpoint o webhook<input id="sync-endpoint" type="url" placeholder="https://..."></label>
+        <p class="v8-help-text">GitHub Pages necesita un servicio externo para escribir en Excel Online.</p>
+        <button class="v8-secondary-btn" type="submit">Guardar conexión</button>
+      </form>
       <div class="v8-connection-card">
         <span id="sync-indicator" class="v8-connection-dot"></span>
         <div><strong id="sync-status-title">Modo local</strong><p id="sync-status-text">Los registros se guardan en este navegador.</p></div>
       </div>
-      <div class="v8-config-note">
-        <strong>Importante</strong>
-        <p>GitHub Pages no puede escribir directamente en un archivo Excel. Se necesita Power Automate, Microsoft Graph, Firebase o un backend intermedio.</p>
-      </div>
     </article>
   </div>
 </section>
+
 
   </main>
 </div>
@@ -408,5 +506,6 @@
 <script src="../assets/js/admin-v8.js"></script>
 <script src="../assets/js/admin-v8-module2.js"></script>
 <script src="../assets/js/admin-v8-module4.js"></script>
+<script src="../assets/js/admin-v8-module5.js"></script>
 </body>
 </html>

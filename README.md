@@ -20,3 +20,12 @@ Acceso administrativo:
 
 Nota:
 La publicación en GitHub Pages sigue siendo manual. Para sincronizar entre dispositivos se requiere Power Automate, Firebase o un backend.
+
+## Hero principal con video
+
+- Video lento integrado a pantalla completa.
+- Reproducción automática, silenciosa, en bucle y compatible con móviles.
+- Imagen de respaldo mientras carga.
+- Capa oscura para mejorar la lectura.
+- Botones Ver cursos e Inscribirme.
+- Encabezado transparente al inicio y sólido al desplazarse.

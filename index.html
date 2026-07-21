@@ -57,58 +57,24 @@
   </header>
 
   <main id="contenido">
-    <section class="hero hero-slider" aria-label="Presentación principal">
-      <article class="hero-slide active">
-        <div class="hero-image" style="background-image:url('assets/images/branding/banner-institucional.webp')"></div>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content reveal">
-          <span class="eyebrow">Presencial y virtual</span>
-          <h1>Capacítate hoy e impulsa tu futuro profesional</h1>
-          <p>Programas técnicos prácticos, accesibles y orientados a mejorar tus oportunidades laborales.</p>
-          <div class="hero-actions">
-            <a class="btn" href="#cursos">Explorar cursos</a>
-            <a class="btn btn-outline" href="#contacto">Solicitar información</a>
-          </div>
+    <section class="hero hero-video" id="inicio" aria-label="Presentación principal">
+      <video class="hero-video-media" autoplay muted loop playsinline preload="metadata" poster="assets/images/branding/banner-institucional.webp" aria-hidden="true">
+        <source src="assets/videos/video-egei-principal.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+      <div class="hero-video-glow" aria-hidden="true"></div>
+      <div class="container hero-content hero-video-content reveal">
+        <span class="eyebrow">Presencial y virtual</span>
+        <h1>Fundación EGEI Digital</h1>
+        <p>Capacítate con programas técnicos y digitales diseñados para fortalecer tus conocimientos y mejorar tus oportunidades profesionales.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#cursos">Ver cursos</a>
+          <button class="btn btn-outline" type="button" data-enroll-open>Inscribirme</button>
         </div>
-      </article>
-
-      <article class="hero-slide">
-        <div class="hero-image" style="background-image:url('assets/images/cursos/excel.webp')"></div>
-        <div class="hero-overlay hero-overlay-green"></div>
-        <div class="container hero-content">
-          <span class="eyebrow">Curso destacado</span>
-          <h2>Domina Microsoft Excel</h2>
-          <p>Aprende desde nivel básico hasta herramientas estadísticas y financieras.</p>
-          <div class="hero-actions">
-            <button class="btn hero-course-button" data-course="Microsoft Excel">Consultar Excel</button>
-            <a class="btn btn-outline" href="#cursos">Ver todos los cursos</a>
-          </div>
-        </div>
-      </article>
-
-      <article class="hero-slide">
-        <div class="hero-image" style="background-image:url('assets/images/cursos/redes-sociales.webp')"></div>
-        <div class="hero-overlay hero-overlay-blue"></div>
-        <div class="container hero-content">
-          <span class="eyebrow">Marketing digital</span>
-          <h2>Impulsa tu marca en redes sociales</h2>
-          <p>Aprende Facebook Ads, WhatsApp Business, Canva y herramientas de contenido digital.</p>
-          <div class="hero-actions">
-            <button class="btn hero-course-button" data-course="Redes Sociales">Consultar curso</button>
-            <a class="btn btn-outline" href="#inicios">Ver próximos inicios</a>
-          </div>
-        </div>
-      </article>
-
-      <div class="hero-controls container">
-        <button class="hero-arrow hero-prev" type="button" aria-label="Banner anterior">‹</button>
-        <div class="hero-dots">
-          <button class="hero-dot active" data-slide-to="0" aria-label="Banner 1"></button>
-          <button class="hero-dot" data-slide-to="1" aria-label="Banner 2"></button>
-          <button class="hero-dot" data-slide-to="2" aria-label="Banner 3"></button>
-        </div>
-        <button class="hero-arrow hero-next" type="button" aria-label="Banner siguiente">›</button>
       </div>
+      <a class="hero-scroll" href="#inicios" aria-label="Desplazarse a próximos inicios">
+        <span>Conoce nuestros cursos</span><i aria-hidden="true"></i>
+      </a>
     </section>
 
     <section class="quick-info" aria-label="Información destacada">

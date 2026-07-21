@@ -122,3 +122,17 @@ const counterObserver=new IntersectionObserver(entries=>{
   });
 },{threshold:.6});
 counters.forEach(counter=>counterObserver.observe(counter));
+
+// Módulo 5: encabezado transparente sobre el video y sólido al desplazarse
+(() => {
+  const header = document.querySelector('.header');
+  const hero = document.querySelector('.hero-video');
+  if (!header || !hero) return;
+  const updateHeader = () => {
+    const scrolled = window.scrollY > 45;
+    header.classList.toggle('hero-transparent', !scrolled);
+    header.classList.toggle('hero-scrolled', scrolled);
+  };
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+})();

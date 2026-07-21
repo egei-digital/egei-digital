@@ -448,3 +448,34 @@ body.dark-mode .wa-pulse{border-color:rgba(83,255,142,.72)!important}
 @media(max-width:840px){.office-location-grid{grid-template-columns:1fr}.office-map-card{min-height:260px}.office-map-visual{min-height:224px}}
 @media(max-width:520px){.office-location-copy{padding:24px}.office-address-card{padding:16px}.quick-grid-v2 article strong{font-size:.95rem}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float-v2{animation:none}}
+
+
+/* ===== Módulo 5.4 · Navegación transparente y preinscripción ===== */
+.site-header{
+  position:absolute;
+  top:0;left:0;right:0;width:100%;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none;
+  transition:background .28s ease,box-shadow .28s ease,backdrop-filter .28s ease;
+}
+.site-header.scrolled{
+  position:fixed;
+  background:rgba(255,255,255,.92)!important;
+  box-shadow:0 10px 30px rgba(9,24,55,.12)!important;
+  backdrop-filter:blur(16px);
+}
+.site-header.scrolled .nav-links{color:#102044}
+.site-header.scrolled .nav-links>a:not(.btn){color:#102044}
+.site-header.scrolled .brand span,.site-header.scrolled .brand small{color:#102044}
+.site-header.scrolled .menu-toggle span{background:#102044}
+.site-header.scrolled .theme-toggle{border-color:rgba(16,32,68,.25);background:rgba(16,32,68,.08);color:#102044}
+body.dark-mode .site-header.scrolled{background:rgba(6,17,38,.92)!important;box-shadow:0 10px 30px rgba(0,0,0,.28)!important}
+body.dark-mode .site-header.scrolled .nav-links,body.dark-mode .site-header.scrolled .nav-links>a:not(.btn),body.dark-mode .site-header.scrolled .brand span,body.dark-mode .site-header.scrolled .brand small{color:#f4f7ff}
+body.dark-mode .site-header.scrolled .menu-toggle span{background:#fff}
+body.dark-mode .site-header.scrolled .theme-toggle{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff}
+@media(max-width:980px){
+  .site-header .nav-links{background:rgba(6,20,63,.97);backdrop-filter:blur(15px)}
+  .site-header.scrolled .nav-links{background:rgba(255,255,255,.98)}
+  body.dark-mode .site-header.scrolled .nav-links{background:rgba(6,17,38,.98)}
+}

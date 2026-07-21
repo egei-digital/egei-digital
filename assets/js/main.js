@@ -14,12 +14,19 @@ document.querySelectorAll(".nav-links a").forEach(link=>link.addEventListener("c
   menuButton?.setAttribute("aria-expanded","false");
 }));
 
-document.querySelectorAll(".course-info,.hero-course-button").forEach(button=>{
+// Los botones de inscripción abren la ventana de preinscripción mediante data-enroll-open.
+// Se conserva este comportamiento solo para botones informativos antiguos que no sean de inscripción.
+document.querySelectorAll(".course-info:not([data-enroll-open]),.hero-course-button:not([data-enroll-open])").forEach(button=>{
   button.addEventListener("click",()=>{
-    courseSelect.value=button.dataset.course;
-    document.querySelector("#contacto").scrollIntoView({behavior:"smooth"});
+    if (courseSelect) courseSelect.value=button.dataset.course || "";
+    document.querySelector("#contacto")?.scrollIntoView({behavior:"smooth"});
   });
 });
+
+const siteHeader=document.querySelector(".site-header");
+const updateHeader=()=>siteHeader?.classList.toggle("scrolled",window.scrollY>40);
+window.addEventListener("scroll",updateHeader,{passive:true});
+updateHeader();
 
 window.addEventListener("scroll",()=>{
   backToTop.classList.toggle("visible",window.scrollY>600);

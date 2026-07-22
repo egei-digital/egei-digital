@@ -566,3 +566,20 @@ body.dark-mode .quick-grid-premium article{
   .egei-pattern-rich .contact-card,.egei-pattern-soft .faq-item,.egei-pattern-soft .start-card,
   .egei-pattern-rich .agenda-shell,.egei-pattern-soft .location-card,.quick-grid-premium article{backdrop-filter:none;-webkit-backdrop-filter:none}
 }
+
+
+/* ===== Versión 6.6 · comunicación directa y redes flotantes ===== */
+.egei-contact-notice{margin:2px 0 4px;padding:12px 14px;border:1px solid rgba(18,54,110,.14);border-radius:14px;background:rgba(238,245,255,.72);color:#40516a;font-size:.78rem;line-height:1.5}
+body.dark-mode .egei-contact-notice{background:rgba(24,52,89,.7);border-color:#35577f;color:#dceaff}
+.social-float-stack{position:fixed;right:22px;bottom:98px;z-index:31;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.social-float{position:relative;display:flex;align-items:center;justify-content:center;width:52px;height:52px;border:3px solid #fff;border-radius:50%;color:#fff!important;box-shadow:0 13px 30px rgba(10,28,65,.28);transition:transform .2s ease,box-shadow .2s ease;overflow:visible}
+.social-float svg{width:25px;height:25px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.18))}
+.social-float span{position:absolute;right:64px;padding:8px 11px;border-radius:10px;background:#07194c;color:#fff;font-size:.74rem;font-weight:850;white-space:nowrap;opacity:0;transform:translateX(6px);pointer-events:none;transition:.2s}
+.social-float:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 18px 38px rgba(10,28,65,.38)}
+.social-float:hover span{opacity:1;transform:none}
+.social-float-facebook{background:#1877f2}
+.social-float-instagram{background:radial-gradient(circle at 30% 110%,#ffd600 0 10%,#ff7a00 28%,#ff0169 58%,#d300c5 78%,#7638fa 100%)}
+.social-float.social-link-pending{opacity:.72;cursor:pointer}
+body.dark-mode .social-float{border-color:#eaf2ff;box-shadow:0 16px 36px rgba(0,0,0,.48)}
+@media(max-width:760px){.social-float-stack{right:15px;bottom:88px;gap:9px}.social-float{width:46px;height:46px;border-width:2px}.social-float svg{width:22px;height:22px}.social-float span{display:none}}
+@media(prefers-reduced-motion:reduce){.social-float{transition:none}}

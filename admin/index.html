@@ -4,9 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#071a48">
-  <title>Panel administrativo | EGEI Digital</title>
+  <title>Panel Premium 6.6 | EGEI Digital</title>
   <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="stylesheet" href="../assets/css/admin-v8.css">
+  <link rel="stylesheet" href="../assets/css/admin-v66.css">
 </head>
 <body class="admin-body">
 <div class="v8-admin-shell" id="admin-shell">
@@ -50,6 +51,7 @@
           <strong id="current-clock">00:00:00</strong>
           <small>La Paz, Bolivia</small>
         </div>
+        <button class="v66-notification-button" id="notification-toggle" aria-label="Ver alertas"><span>♢</span><i id="notification-count">0</i></button>
         <button class="v8-icon-button" id="theme-toggle" aria-label="Cambiar tema">☾</button>
         <div class="v8-user">
           <div class="v8-avatar">AD</div>
@@ -65,7 +67,7 @@
           <h2>Bienvenido al panel de EGEI Digital</h2>
           <p>Controla la actividad del centro de capacitación desde una sola pantalla.</p>
         </div>
-        <div class="v8-welcome-date" id="welcome-date"></div>
+        <div class="v66-welcome-actions"><div class="v8-welcome-date" id="welcome-date"></div><button class="v66-command-button" id="command-button"><span>⌘</span> Acceso rápido</button></div>
       </div>
 
       <div class="v8-metrics">
@@ -73,6 +75,29 @@
         <article class="v8-metric"><span class="v8-metric-icon">▤</span><div><small>Cursos disponibles</small><strong id="metric-courses">7</strong><em>Oferta académica</em></div></article>
         <article class="v8-metric"><span class="v8-metric-icon">▣</span><div><small>Próximos inicios</small><strong id="metric-starts">3</strong><em>Fechas programadas</em></div></article>
         <article class="v8-metric"><span class="v8-metric-icon">✦</span><div><small>Noticias publicadas</small><strong id="metric-news">0</strong><em>Publicaciones</em></div></article>
+      </div>
+
+
+      <div class="v66-insight-grid">
+        <article class="v8-panel v66-funnel-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Embudo comercial</span><h3>Estado de interesados</h3></div><span class="v66-live"><i></i> En vivo</span></div>
+          <div class="v66-funnel" id="v66-funnel"></div>
+        </article>
+        <article class="v8-panel v66-next-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Agenda académica</span><h3>Próximos inicios</h3></div><button class="v66-link-button" data-go="starts">Administrar</button></div>
+          <div class="v66-next-list" id="v66-next-list"></div>
+        </article>
+      </div>
+
+      <div class="v66-insight-grid v66-lower-grid">
+        <article class="v8-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Actividad reciente</span><h3>Últimos interesados</h3></div><button class="v66-link-button" data-go="registrations">Ver todos</button></div>
+          <div class="v66-recent-list" id="v66-recent-list"></div>
+        </article>
+        <article class="v8-panel">
+          <div class="v8-panel-head"><div><span class="v8-kicker">Rendimiento</span><h3>Curso más consultado</h3></div></div>
+          <div class="v66-top-course" id="v66-top-course"></div>
+        </article>
       </div>
 
       <div class="v8-dashboard-grid">
@@ -106,7 +131,7 @@
           <div class="v8-session-info">
             <div><span>Usuario</span><strong>Administrador</strong></div>
             <div><span>Zona horaria</span><strong>America/La_Paz</strong></div>
-            <div><span>Versión</span><strong>8 · Módulo 5</strong></div>
+            <div><span>Versión</span><strong>6.6 Premium</strong></div>
             <div><span>Último acceso</span><strong id="last-access">Ahora</strong></div>
           </div>
         </article>
@@ -507,5 +532,8 @@
 <script src="../assets/js/admin-v8-module2.js"></script>
 <script src="../assets/js/admin-v8-module4.js"></script>
 <script src="../assets/js/admin-v8-module5.js"></script>
+<script src="../assets/js/admin-v66.js"></script>
+<div class="v66-notification-panel" id="notification-panel" aria-hidden="true"><div class="v66-notification-head"><div><span class="v8-kicker">Centro de alertas</span><h3>Notificaciones</h3></div><button id="notification-close">×</button></div><div id="notification-list"></div></div>
+<div class="v66-command-palette" id="command-palette" aria-hidden="true"><div class="v66-command-card"><div class="v66-command-search"><span>⌕</span><input id="command-search" placeholder="Buscar una acción o módulo..."><kbd>ESC</kbd></div><div class="v66-command-results" id="command-results"></div></div></div>
 </body>
 </html>

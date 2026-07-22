@@ -6,7 +6,7 @@ const sidebar=document.querySelector('#sidebar');
 const themeToggle=document.querySelector('#theme-toggle');
 const sidebarToggle=document.querySelector('#sidebar-toggle');
 const sectionTitle=document.querySelector('#section-title');
-const titleMap={dashboard:'Dashboard',courses:'Cursos',starts:'Próximos inicios',banners:'Banners',news:'Noticias',registrations:'Preinscripciones',settings:'Configuración'};
+const titleMap={dashboard:'Dashboard',courses:'Cursos',starts:'Próximos inicios',banners:'Banners',news:'Noticias',registrations:'Preinscripciones',students:'Estudiantes',reports:'Reportes',settings:'Configuración'};
 
 function applyTheme(theme){
   document.body.classList.toggle('v8-dark',theme==='dark');

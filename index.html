@@ -62,12 +62,11 @@
 
   <main id="contenido">
     <section class="hero hero-video" id="inicio" aria-label="Presentación principal">
-      <video class="hero-video-media" autoplay muted loop playsinline preload="metadata" poster="assets/images/branding/banner-institucional.webp" aria-hidden="true">
+      <video class="hero-video-media" autoplay muted loop playsinline preload="auto" disablepictureinpicture poster="assets/images/branding/banner-institucional.webp" aria-hidden="true">
         <source src="assets/video/hero.mp4" type="video/mp4">
       </video>
       <div class="hero-video-overlay"></div>
       <div class="hero-video-glow" aria-hidden="true"></div>
-      <button class="hero-video-control" id="hero-video-control" type="button" aria-label="Pausar video de fondo" aria-pressed="false"><span aria-hidden="true">Ⅱ</span><b>Pausar video</b></button>
       <div class="container hero-content hero-video-content reveal">
         <span class="eyebrow">Presencial o Virtual</span>
         <h1>Fundación EGEI Digital</h1>
@@ -176,75 +175,34 @@
           </div>
         </div>
 
-        <div class="courses-grid">
-          <article class="course-card reveal" data-category="digital">
-            <img src="assets/images/cursos/excel.webp" alt="Curso de Excel" loading="lazy">
-            <div class="course-body">
-              <span class="tag">1 mes</span>
-              <h3>Microsoft Excel</h3>
-              <p>Excel básico, intermedio, avanzado, estadístico y financiero.</p>
-              <button class="text-link course-info" data-course="Microsoft Excel">Consultar curso →</button>
-            </div>
+        <div class="courses-grid courses-grid-v6">
+          <article class="course-card course-card-v6 reveal" data-category="digital">
+            <div class="course-media"><img src="assets/images/cursos/excel.webp" alt="Curso de Excel" loading="lazy"><span class="course-badge badge-popular">Más solicitado</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>1 mes</span><span>Últimos cupos</span></div><h3>Microsoft Excel</h3><p>Excel básico, intermedio, avanzado, estadístico y financiero.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Microsoft Excel">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Microsoft Excel">Inscribirme</button></div></div>
           </article>
-
-          <article class="course-card reveal" data-category="digital">
-            <img src="assets/images/cursos/office.webp" alt="Curso de Microsoft Office" loading="lazy">
-            <div class="course-body">
-              <span class="tag">Programa completo</span>
-              <h3>Microsoft Office</h3>
-              <p>Word, Excel, PowerPoint y Publisher para el trabajo y los estudios.</p>
-              <button class="text-link course-info" data-course="Microsoft Office">Consultar curso →</button>
-            </div>
+          <article class="course-card course-card-v6 reveal" data-category="digital">
+            <div class="course-media"><img src="assets/images/cursos/office.webp" alt="Curso de Microsoft Office" loading="lazy"><span class="course-badge badge-new">Nuevo inicio</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>Programa completo</span><span>Cupos disponibles</span></div><h3>Microsoft Office</h3><p>Word, Excel, PowerPoint y Publisher para el trabajo y los estudios.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Microsoft Office">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Microsoft Office">Inscribirme</button></div></div>
           </article>
-
-          <article class="course-card reveal" data-category="digital">
-            <img src="assets/images/cursos/diseno-grafico.webp" alt="Curso de Diseño Gráfico" loading="lazy">
-            <div class="course-body">
-              <span class="tag">Programa creativo</span>
-              <h3>Diseño Gráfico</h3>
-              <p>Photoshop, Illustrator, InDesign, Premiere y herramientas de audio.</p>
-              <button class="text-link course-info" data-course="Diseño Gráfico">Consultar curso →</button>
-            </div>
+          <article class="course-card course-card-v6 reveal" data-category="digital">
+            <div class="course-media"><img src="assets/images/cursos/diseno-grafico.webp" alt="Curso de Diseño Gráfico" loading="lazy"><span class="course-badge">Programa creativo</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>Formación práctica</span><span>Cupos disponibles</span></div><h3>Diseño Gráfico</h3><p>Photoshop, Illustrator, InDesign, Premiere y herramientas de audio.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Diseño Gráfico">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Diseño Gráfico">Inscribirme</button></div></div>
           </article>
-
-          <article class="course-card reveal" data-category="digital">
-            <img src="assets/images/cursos/redes-sociales.webp" alt="Curso de Redes Sociales" loading="lazy">
-            <div class="course-body">
-              <span class="tag">1 mes</span>
-              <h3>Redes Sociales</h3>
-              <p>Facebook Ads, WhatsApp Business, Canva y publicidad digital.</p>
-              <button class="text-link course-info" data-course="Redes Sociales">Consultar curso →</button>
-            </div>
+          <article class="course-card course-card-v6 reveal" data-category="digital">
+            <div class="course-media"><img src="assets/images/cursos/redes-sociales.webp" alt="Curso de Redes Sociales" loading="lazy"><span class="course-badge badge-popular">Tendencia</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>1 mes</span><span>Inscripción abierta</span></div><h3>Redes Sociales</h3><p>Facebook Ads, WhatsApp Business, Canva y publicidad digital.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Redes Sociales">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Redes Sociales">Inscribirme</button></div></div>
           </article>
-
-          <article class="course-card reveal" data-category="administrativo">
-            <img src="assets/images/cursos/comercio-exterior.webp" alt="Curso de Comercio Exterior" loading="lazy">
-            <div class="course-body">
-              <span class="tag">Gestión y aduanas</span>
-              <h3>Comercio Exterior</h3>
-              <p>Importaciones, gestión aduanera, clasificación arancelaria e Incoterms.</p>
-              <button class="text-link course-info" data-course="Comercio Exterior">Consultar curso →</button>
-            </div>
+          <article class="course-card course-card-v6 reveal" data-category="administrativo">
+            <div class="course-media"><img src="assets/images/cursos/comercio-exterior.webp" alt="Curso de Comercio Exterior" loading="lazy"><span class="course-badge">Gestión y aduanas</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>Especialización</span><span>Cupos disponibles</span></div><h3>Comercio Exterior</h3><p>Importaciones, gestión aduanera, clasificación arancelaria e Incoterms.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Comercio Exterior">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Comercio Exterior">Inscribirme</button></div></div>
           </article>
-
-          <article class="course-card reveal" data-category="tecnico">
-            <img src="assets/images/cursos/ensamblaje.webp" alt="Curso de Ensamblaje de Computadoras" loading="lazy">
-            <div class="course-body">
-              <span class="tag">1 mes</span>
-              <h3>Ensamblaje de Computadoras</h3>
-              <p>Hardware, instalación de software, optimización y mantenimiento.</p>
-              <button class="text-link course-info" data-course="Ensamblaje de Computadoras">Consultar curso →</button>
-            </div>
+          <article class="course-card course-card-v6 reveal" data-category="tecnico">
+            <div class="course-media"><img src="assets/images/cursos/ensamblaje.webp" alt="Curso de Ensamblaje de Computadoras" loading="lazy"><span class="course-badge badge-new">Práctico</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>1 mes</span><span>Inscripción abierta</span></div><h3>Ensamblaje de Computadoras</h3><p>Hardware, instalación de software, optimización y mantenimiento.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Ensamblaje de Computadoras">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Ensamblaje de Computadoras">Inscribirme</button></div></div>
           </article>
-
-          <article class="course-card reveal" data-category="administrativo">
-            <img src="assets/images/cursos/secretariado.webp" alt="Curso de Secretariado Comercial Administrativo" loading="lazy">
-            <div class="course-body">
-              <span class="tag">1 mes</span>
-              <h3>Secretariado Comercial</h3>
-              <p>Administración, marketing, comunicación y atención al cliente.</p>
-              <button class="text-link course-info" data-course="Secretariado Comercial Administrativo">Consultar curso →</button>
-            </div>
+          <article class="course-card course-card-v6 reveal" data-category="administrativo">
+            <div class="course-media"><img src="assets/images/cursos/secretariado.webp" alt="Curso de Secretariado Comercial Administrativo" loading="lazy"><span class="course-badge">Área administrativa</span><span class="course-mode">Presencial o Virtual</span></div>
+            <div class="course-body"><div class="course-meta"><span>1 mes</span><span>Cupos disponibles</span></div><h3>Secretariado Comercial</h3><p>Administración, marketing, comunicación y atención al cliente.</p><div class="course-actions"><button class="btn btn-small btn-course-secondary course-info" type="button" data-course="Secretariado Comercial Administrativo">Más información</button><button class="btn btn-small" type="button" data-enroll-open data-course="Secretariado Comercial Administrativo">Inscribirme</button></div></div>
           </article>
         </div>
 

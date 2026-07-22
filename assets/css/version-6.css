@@ -22,3 +22,33 @@ body.dark-mode .course-card:hover,body.dark-mode .start-card:hover,body.dark-mod
 @media(max-width:760px){.version-six-trust-grid{grid-template-columns:1fr}.version-six-trust-grid>span{padding:13px 18px;border-right:0;border-bottom:1px solid rgba(255,255,255,.1)}.version-six-trust-grid>span:last-child{border-bottom:0}.hero-video-control{right:16px;bottom:88px}.hero-video-control b{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.course-card,.start-card,.benefit-card,.news-card,.btn,.hero-video-control{transition:none!important}.btn::after{display:none}}
 .nav-links>a.is-active:not(.btn){font-weight:900}.nav-links>a.is-active:not(.btn)::after{left:0;right:0}
+
+/* Versión 6 mejorada: video automático sin controles */
+.hero-video-media{pointer-events:none}
+.hero-video-control{display:none!important}
+
+/* Cursos premium tipo plataforma educativa */
+.courses-grid-v6{align-items:stretch}
+.course-card-v6{position:relative;display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(14,56,125,.12);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:0 14px 38px rgba(7,28,72,.09)}
+.course-card-v6 .course-media{position:relative;overflow:hidden;aspect-ratio:16/10;background:#071a3c}
+.course-card-v6 .course-media::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(3,13,37,.78))}
+.course-card-v6 .course-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .5s ease}
+.course-card-v6:hover .course-media img{transform:scale(1.07);filter:saturate(1.08)}
+.course-badge,.course-mode{position:absolute;z-index:2;display:inline-flex;align-items:center;border-radius:999px;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,.16)}
+.course-badge{top:14px;left:14px;padding:7px 11px;background:#fff;color:#071a3c;font-size:.72rem}
+.course-badge.badge-popular{background:#ffb800}.course-badge.badge-new{background:#38bdf8}
+.course-mode{right:14px;bottom:14px;padding:7px 10px;background:rgba(5,17,45,.8);backdrop-filter:blur(8px);color:#fff;font-size:.68rem;border:1px solid rgba(255,255,255,.22)}
+.course-card-v6 .course-body{display:flex;flex:1;flex-direction:column;padding:22px}
+.course-card-v6 .course-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.course-card-v6 .course-meta span{padding:5px 9px;border-radius:999px;background:#edf4ff;color:#174c9e;font-size:.68rem;font-weight:800}
+.course-card-v6 h3{margin:0 0 10px;font-size:1.28rem}.course-card-v6 p{margin:0 0 20px;color:#52617a}
+.course-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:auto}
+.course-actions .btn{min-height:42px;padding:0 12px;font-size:.76rem}
+.btn-course-secondary{background:transparent!important;color:#123b7a!important;border-color:#bfd2ee!important;box-shadow:none!important}
+.btn-course-secondary:hover{background:#edf4ff!important;border-color:#7ca5dd!important}
+body.dark-mode .course-card-v6{background:rgba(8,20,43,.94);border-color:rgba(137,180,255,.18)}
+body.dark-mode .course-card-v6 p{color:#b8c7df}
+body.dark-mode .course-card-v6 .course-meta span{background:#152d54;color:#d9e8ff}
+body.dark-mode .btn-course-secondary{color:#dceaff!important;border-color:#31598e!important}
+body.dark-mode .btn-course-secondary:hover{background:#142b4e!important}
+@media(max-width:560px){.course-actions{grid-template-columns:1fr}.course-card-v6 .course-media{aspect-ratio:16/9}}

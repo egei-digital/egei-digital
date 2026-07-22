@@ -1,23 +1,15 @@
 (() => {
   const video = document.querySelector('.hero-video-media');
-  const control = document.querySelector('#hero-video-control');
-  if (video && control) {
-    const label = control.querySelector('b');
-    const icon = control.querySelector('span');
-    const sync = () => {
-      const paused = video.paused;
-      control.setAttribute('aria-pressed', String(paused));
-      control.setAttribute('aria-label', paused ? 'Reproducir video de fondo' : 'Pausar video de fondo');
-      if (label) label.textContent = paused ? 'Reproducir video' : 'Pausar video';
-      if (icon) icon.textContent = paused ? '▶' : 'Ⅱ';
-    };
-    control.addEventListener('click', async () => {
-      try { video.paused ? await video.play() : video.pause(); } catch (_) {}
-      sync();
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    const startVideo = () => video.play().catch(() => {});
+    if (video.readyState >= 2) startVideo();
+    else video.addEventListener('canplay', startVideo, { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && video.paused) startVideo();
     });
-    video.addEventListener('play', sync);
-    video.addEventListener('pause', sync);
-    sync();
   }
 
   const sections = [...document.querySelectorAll('main section[id]')];

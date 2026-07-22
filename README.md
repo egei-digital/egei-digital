@@ -26,3 +26,7 @@ Usuario: `admin`
 Contraseña: `egei2026`
 
 > GitHub Pages es estático. Los datos guardados únicamente en localStorage permanecen en el navegador donde se realizaron los cambios. Para sincronización real entre dispositivos se requiere Firebase, Supabase o un backend equivalente.
+
+## Versión 6 mejorada
+- Video principal automático, silencioso, continuo y sin controles visibles.
+- Tarjetas de cursos rediseñadas con etiquetas, modalidad y botones de información e inscripción.

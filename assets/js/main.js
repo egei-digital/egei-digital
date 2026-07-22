@@ -177,3 +177,26 @@ counters.forEach(counter=>counterObserver.observe(counter));
   }
   render();
 })();
+
+
+// Módulo 5.5: enlaces sociales administrables
+(() => {
+  const links = document.querySelectorAll('[data-social-link]');
+  if (!links.length) return;
+  let institution = {};
+  try { institution = JSON.parse(localStorage.getItem('egei_institution') || '{}'); } catch (_) {}
+  links.forEach(link => {
+    const network = link.dataset.socialLink;
+    const url = (institution[network] || '').trim();
+    if (url) {
+      link.href = url;
+      link.classList.remove('social-link-pending');
+    } else {
+      link.href = '#contacto';
+      link.classList.add('social-link-pending');
+      link.removeAttribute('target');
+      link.removeAttribute('rel');
+      link.title = `Agrega el enlace de ${network} desde Panel > Configuración`;
+    }
+  });
+})();

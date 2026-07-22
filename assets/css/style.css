@@ -494,3 +494,18 @@ body.dark-mode .site-header.scrolled{background:rgba(7,18,39,.9)!important;borde
 body.dark-mode .quick-grid-premium article{background:rgba(12,29,54,.94);border-color:#2b456a}body.dark-mode .quick-grid-premium small,body.dark-mode .quick-grid-premium p{color:#b8c8df}body.dark-mode .quick-grid-premium strong{color:#f5f8ff}body.dark-mode .quick-grid-premium .quick-icon{background:#183963;color:#dce9ff}body.dark-mode .agenda-shell{background:#0d1d35;border-color:#2d4569}body.dark-mode .agenda-calendar-premium{background:#0d1d35!important}body.dark-mode .agenda-enroll{color:#82b2ff}body.dark-mode .btn-outline-dark{color:#edf4ff;border-color:#395477}body.dark-mode .office-map-caption{background:#0d1d35}body.dark-mode .office-map-caption strong{color:#f4f7ff}body.dark-mode .office-map-caption span{color:#c4d0e5}body.dark-mode .office-map-caption a{color:#8eb9ff}
 @media(max-width:980px){.site-header{top:6px}.quick-grid-premium{grid-template-columns:1fr 1fr}.agenda-shell{grid-template-columns:1fr}.agenda-spotlight{display:grid;grid-template-columns:auto 1fr;column-gap:24px}.agenda-spotlight-label,.agenda-spotlight .btn,.agenda-spotlight-tags{grid-column:1/-1}.agenda-spotlight-date{margin:22px 0}.agenda-spotlight h3{align-self:end}}
 @media(max-width:760px){.site-header{width:calc(100% - 12px);border-radius:16px}.hero-video-content h1{font-size:clamp(2.7rem,15vw,4.5rem)}.quick-info{margin-top:-32px}.quick-grid-premium{grid-template-columns:1fr}.quick-grid-premium article{grid-template-columns:44px 1fr}.agenda-spotlight{display:block}.agenda-item{grid-template-columns:62px 1fr}.agenda-actions{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;width:100%}.office-map-caption{align-items:flex-start;flex-direction:column}.office-map-card iframe{height:320px}}
+
+
+/* ===== Módulo 5.5 · Patrón educativo adaptable ===== */
+:root{--egei-pattern:url('../images/backgrounds/patron-educativo.webp')}
+.pattern-section{position:relative;isolation:isolate;overflow:hidden}
+.pattern-section::before{content:"";position:absolute;inset:0;z-index:-2;background-image:var(--egei-pattern);background-size:620px auto;background-repeat:repeat;opacity:.055;filter:grayscale(1) contrast(.88);pointer-events:none}
+.pattern-section::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(248,251,255,.94),rgba(255,255,255,.90));pointer-events:none}
+body.dark-mode .pattern-section::before{opacity:.075;filter:grayscale(1) invert(1) brightness(1.25) contrast(.76)}
+body.dark-mode .pattern-section::after{background:linear-gradient(180deg,rgba(7,18,39,.94),rgba(11,27,51,.91))}
+.pattern-section .section-heading,.pattern-section .container{position:relative;z-index:1}
+.social-links a{display:inline-flex;align-items:center;gap:8px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.social-links a:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(18,54,110,.18)}
+body.dark-mode .social-links a{background:#17365f!important;color:#f4f8ff!important;border:1px solid #36577f}
+body.dark-mode .social-links a:hover{background:#1d477c!important;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+@media(max-width:760px){.pattern-section::before{background-size:460px auto;opacity:.045}}

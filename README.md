@@ -1,39 +1,28 @@
-# EGEI Digital — Versión 8 · Módulo 5
+# EGEI Digital — Versión 6 Premium
 
-Incluye todos los módulos anteriores y agrega:
+Versión estable preparada para publicación en GitHub Pages.
 
-- Gestión de estudiantes.
-- Importación y exportación CSV.
-- Reportes filtrados de estudiantes y preinscripciones.
-- Exportación CSV y opción de guardar como PDF mediante impresión.
-- Configuración institucional.
-- Cursos simplificados a:
-  nombre, imagen, duración, precio, descuento y cupos disponibles.
-- Próximos inicios simplificados a:
-  curso, fecha, hora, modalidad, cupos y color de tarjeta.
-- Correcciones de modo oscuro preservadas.
-- Persistencia local mediante localStorage.
+## Mejoras de esta versión
 
-Acceso administrativo:
-- Usuario: admin
-- Contraseña: egei2026
+- Hero de video con control accesible para pausar o reproducir.
+- Navegación premium con sección activa.
+- Patrón educativo exclusivo adaptable a modo claro y oscuro.
+- Tarjetas, agenda, ubicación y formularios con acabado visual mejorado.
+- Enlaces de Facebook e Instagram administrables desde Configuración.
+- Preinscripción modal desde todos los botones de inscripción.
+- Botón flotante de WhatsApp animado y visible en ambos temas.
+- Diseño responsive, reducción de movimiento y mejoras de accesibilidad.
+- Etiquetas SEO y datos estructurados conservados.
 
-Nota:
-La publicación en GitHub Pages sigue siendo manual. Para sincronizar entre dispositivos se requiere Power Automate, Firebase o un backend.
+## Publicación
 
-## Hero principal con video
+Sube el contenido de esta carpeta a la raíz del repositorio `egei-digital`. En GitHub, activa Pages desde la rama principal y la carpeta raíz.
 
-- Video lento integrado a pantalla completa.
-- Reproducción automática, silenciosa, en bucle y compatible con móviles.
-- Imagen de respaldo mientras carga.
-- Capa oscura para mejorar la lectura.
-- Botones Ver cursos e Inscribirme.
-- Encabezado transparente al inicio y sólido al desplazarse.
+## Panel
 
-## Módulo 5.6 — Patrón exclusivo EGEI Digital
+Ruta: `admin/login.html`
 
-- Fondo vectorial original inspirado en educación y herramientas digitales.
-- Iconos de laptop, hoja de cálculo, certificado, libro, gráficos, diseño, calculadora, redes sociales y graduación.
-- Mayor visibilidad en modo claro y oscuro.
-- Tarjetas translúcidas para mantener la lectura y dejar visible el patrón.
-- El patrón es SVG: no pierde calidad y pesa muy poco.
+Usuario: `admin`  
+Contraseña: `egei2026`
+
+> GitHub Pages es estático. Los datos guardados únicamente en localStorage permanecen en el navegador donde se realizaron los cambios. Para sincronización real entre dispositivos se requiere Firebase, Supabase o un backend equivalente.

@@ -509,3 +509,60 @@ body.dark-mode .pattern-section::after{background:linear-gradient(180deg,rgba(7,
 body.dark-mode .social-links a{background:#17365f!important;color:#f4f8ff!important;border:1px solid #36577f}
 body.dark-mode .social-links a:hover{background:#1d477c!important;box-shadow:0 12px 28px rgba(0,0,0,.35)}
 @media(max-width:760px){.pattern-section::before{background-size:460px auto;opacity:.045}}
+
+/* ===== Módulo 5.6 · Patrón exclusivo EGEI Digital ===== */
+:root{
+  --egei-line-pattern:url('../images/backgrounds/patron-egei-digital.svg');
+  --egei-pattern-ink:#0c4fc4;
+  --egei-pattern-ink-dark:#7eb2ff;
+}
+.egei-pattern-soft,.egei-pattern-rich,.egei-pattern-band{position:relative;isolation:isolate;overflow:hidden}
+.egei-pattern-soft::before,.egei-pattern-rich::before,.egei-pattern-band::before{
+  content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+  background-color:var(--egei-pattern-ink);
+  -webkit-mask-image:var(--egei-line-pattern);mask-image:var(--egei-line-pattern);
+  -webkit-mask-size:560px 560px;mask-size:560px 560px;
+  -webkit-mask-repeat:repeat;mask-repeat:repeat;
+  opacity:.13;
+}
+.egei-pattern-soft::after,.egei-pattern-rich::after,.egei-pattern-band::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none}
+.egei-pattern-soft::after{background:linear-gradient(180deg,rgba(247,250,255,.78),rgba(255,255,255,.88))}
+.egei-pattern-rich::before{opacity:.18;-webkit-mask-size:510px 510px;mask-size:510px 510px}
+.egei-pattern-rich::after{background:linear-gradient(135deg,rgba(237,245,255,.72),rgba(255,255,255,.82) 55%,rgba(229,241,255,.76))}
+.egei-pattern-band::before{opacity:.22;-webkit-mask-size:430px 430px;mask-size:430px 430px}
+.egei-pattern-band::after{background:linear-gradient(90deg,rgba(255,255,255,.84),rgba(239,247,255,.72),rgba(255,255,255,.84))}
+.egei-pattern-soft>.container,.egei-pattern-rich>.container,.egei-pattern-band>.container{position:relative;z-index:1}
+
+/* Cards gain a translucent panel so the pattern is visible around them, not through text */
+.egei-pattern-soft .course-card,.egei-pattern-rich .benefit-card,.egei-pattern-rich .news-card,
+.egei-pattern-rich .contact-card,.egei-pattern-soft .faq-item,.egei-pattern-soft .start-card,
+.egei-pattern-rich .agenda-shell,.egei-pattern-soft .location-card{
+  background:rgba(255,255,255,.90);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-color:rgba(45,101,194,.16);box-shadow:0 18px 48px rgba(16,48,96,.10)
+}
+.quick-grid-premium article{background:rgba(255,255,255,.88)!important;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);border:1px solid rgba(35,91,180,.15)!important;box-shadow:0 16px 42px rgba(11,55,118,.10)!important}
+
+body.dark-mode{--egei-pattern-ink-dark:#91bcff}
+body.dark-mode .egei-pattern-soft::before,body.dark-mode .egei-pattern-rich::before,body.dark-mode .egei-pattern-band::before{background-color:var(--egei-pattern-ink-dark);opacity:.17}
+body.dark-mode .egei-pattern-rich::before{opacity:.22}
+body.dark-mode .egei-pattern-band::before{opacity:.24}
+body.dark-mode .egei-pattern-soft::after{background:linear-gradient(180deg,rgba(7,17,35,.78),rgba(10,24,46,.88))}
+body.dark-mode .egei-pattern-rich::after{background:linear-gradient(135deg,rgba(5,15,32,.72),rgba(10,26,51,.84) 55%,rgba(6,19,41,.78))}
+body.dark-mode .egei-pattern-band::after{background:linear-gradient(90deg,rgba(7,18,38,.85),rgba(10,28,55,.72),rgba(7,18,38,.85))}
+body.dark-mode .egei-pattern-soft .course-card,body.dark-mode .egei-pattern-rich .benefit-card,
+body.dark-mode .egei-pattern-rich .news-card,body.dark-mode .egei-pattern-rich .contact-card,
+body.dark-mode .egei-pattern-soft .faq-item,body.dark-mode .egei-pattern-soft .start-card,
+body.dark-mode .egei-pattern-rich .agenda-shell,body.dark-mode .egei-pattern-soft .location-card,
+body.dark-mode .quick-grid-premium article{
+  background:rgba(9,24,49,.88)!important;border-color:rgba(142,188,255,.18)!important;
+  box-shadow:0 20px 48px rgba(0,0,0,.30)!important
+}
+@media(max-width:760px){
+  .egei-pattern-soft::before,.egei-pattern-rich::before{-webkit-mask-size:390px 390px;mask-size:390px 390px;opacity:.14}
+  .egei-pattern-band::before{-webkit-mask-size:340px 340px;mask-size:340px 340px;opacity:.19}
+}
+@media(prefers-reduced-transparency:reduce){
+  .egei-pattern-soft .course-card,.egei-pattern-rich .benefit-card,.egei-pattern-rich .news-card,
+  .egei-pattern-rich .contact-card,.egei-pattern-soft .faq-item,.egei-pattern-soft .start-card,
+  .egei-pattern-rich .agenda-shell,.egei-pattern-soft .location-card,.quick-grid-premium article{backdrop-filter:none;-webkit-backdrop-filter:none}
+}

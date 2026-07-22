@@ -29,3 +29,11 @@ La publicación en GitHub Pages sigue siendo manual. Para sincronizar entre disp
 - Capa oscura para mejorar la lectura.
 - Botones Ver cursos e Inscribirme.
 - Encabezado transparente al inicio y sólido al desplazarse.
+
+## Módulo 5.6 — Patrón exclusivo EGEI Digital
+
+- Fondo vectorial original inspirado en educación y herramientas digitales.
+- Iconos de laptop, hoja de cálculo, certificado, libro, gráficos, diseño, calculadora, redes sociales y graduación.
+- Mayor visibilidad en modo claro y oscuro.
+- Tarjetas translúcidas para mantener la lectura y dejar visible el patrón.
+- El patrón es SVG: no pierde calidad y pesa muy poco.

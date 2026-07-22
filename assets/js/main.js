@@ -171,7 +171,7 @@ counters.forEach(counter=>counterObserver.observe(counter));
     listEl.innerHTML=rows.length?rows.map(e=>`<article class="agenda-item">
       <div class="agenda-date"><strong>${Number(e.date.slice(8,10))}</strong><span>${dayName(e.date)} · ${monthShort(e.date)}</span></div>
       <div class="agenda-copy"><h4>${e.course}</h4><p>Inicio programado para nuevos participantes.</p><div class="agenda-meta"><span>${e.modality}</span><span>${e.duration}</span></div></div>
-      <span class="agenda-status">${e.status}</span>
+      <div class="agenda-actions"><span class="agenda-status">${e.status}</span><button type="button" class="agenda-enroll" data-enroll-open data-course="${e.course}">Inscribirme</button></div>
     </article>`).join(''):'<p class="agenda-empty">No existen inicios publicados para este mes.</p>';
     monthsEl.querySelectorAll('[data-month]').forEach(btn=>btn.addEventListener('click',()=>{selected=btn.dataset.month;render()}));
   }

@@ -60,7 +60,7 @@
   <main id="contenido">
     <section class="hero hero-video" id="inicio" aria-label="Presentación principal">
       <video class="hero-video-media" autoplay muted loop playsinline preload="metadata" poster="assets/images/branding/banner-institucional.webp" aria-hidden="true">
-        <source src="assets/videos/video-egei-principal.mp4" type="video/mp4">
+        <source src="assets/video/hero.mp4" type="video/mp4">
       </video>
       <div class="hero-video-overlay"></div>
       <div class="hero-video-glow" aria-hidden="true"></div>
@@ -79,11 +79,11 @@
     </section>
 
     <section class="quick-info" aria-label="Información destacada">
-      <div class="container quick-grid quick-grid-v2">
-        <article><span class="quick-icon" aria-hidden="true">▦</span><div><strong>7</strong><span>Cursos principales</span></div></article>
-        <article><span class="quick-icon" aria-hidden="true">◉</span><div><strong>Presencial o Virtual</strong><span>Modalidades</span></div></article>
-        <article><span class="quick-icon" aria-hidden="true">✓</span><div><strong>100% práctico</strong><span>Enfoque práctico</span></div></article>
-        <article><span class="quick-icon" aria-hidden="true">⌖</span><div><strong>La Paz</strong><span>Atención en La Paz</span></div></article>
+      <div class="container quick-grid quick-grid-premium">
+        <article><span class="quick-icon" aria-hidden="true">01</span><div><small>Oferta académica</small><strong>Cursos principales</strong><p>Programas técnicos y digitales para fortalecer tu perfil profesional.</p></div></article>
+        <article><span class="quick-icon" aria-hidden="true">02</span><div><small>Elige cómo estudiar</small><strong>Presencial o Virtual</strong><p>Modalidades flexibles para participantes de La Paz y de todo el país.</p></div></article>
+        <article><span class="quick-icon" aria-hidden="true">03</span><div><small>Aprender haciendo</small><strong>Enfoque práctico</strong><p>Actividades aplicadas, ejercicios y acompañamiento durante el curso.</p></div></article>
+        <article><span class="quick-icon" aria-hidden="true">04</span><div><small>Atención personalizada</small><strong>Oficina en La Paz</strong><p>Orientación directa antes, durante y después de tu inscripción.</p></div></article>
       </div>
     </section>
 
@@ -115,25 +115,29 @@
       </div>
     </section>
 
-    <section class="section calendar-section" id="calendario">
+    <section class="section calendar-section calendar-premium" id="calendario">
       <div class="container">
         <div class="section-heading reveal">
           <span class="eyebrow dark">Agenda académica</span>
-          <h2>Calendario de próximos inicios</h2>
-          <p>Revisa rápidamente las fechas programadas y selecciona un inicio para solicitar información.</p>
+          <h2>Planifica tu próximo curso</h2>
+          <p>Explora los inicios por mes y reserva tu cupo desde la misma agenda.</p>
         </div>
-        <div class="agenda-calendar reveal">
-          <div class="agenda-toolbar">
-            <div>
-              <span class="agenda-kicker">Próximas aperturas</span>
-              <h3 id="agenda-month-title">Julio 2026</h3>
+        <div class="agenda-shell reveal">
+          <aside class="agenda-spotlight">
+            <span class="agenda-spotlight-label">Siguiente inicio</span>
+            <div class="agenda-spotlight-date"><strong>20</strong><span>JUL<br>2026</span></div>
+            <h3>Microsoft Excel</h3>
+            <p>Presencial o Virtual · Duración de 1 mes</p>
+            <div class="agenda-spotlight-tags"><span>Cupos disponibles</span><span>Inscripción abierta</span></div>
+            <button class="btn" type="button" data-enroll-open data-course="Microsoft Excel">Reservar cupo</button>
+          </aside>
+          <div class="agenda-calendar agenda-calendar-premium">
+            <div class="agenda-toolbar">
+              <div><span class="agenda-kicker">Próximas aperturas</span><h3 id="agenda-month-title">Julio 2026</h3></div>
+              <div class="agenda-months" id="agenda-months" aria-label="Seleccionar mes"></div>
             </div>
-            <div class="agenda-months" id="agenda-months" aria-label="Seleccionar mes"></div>
-          </div>
-          <div class="agenda-list" id="agenda-list" aria-live="polite"></div>
-          <div class="agenda-footer">
-            <p>Selecciona un curso para recibir horarios, costos y disponibilidad.</p>
-            <a class="btn btn-small" href="#contacto">Consultar disponibilidad</a>
+            <div class="agenda-list" id="agenda-list" aria-live="polite"></div>
+            <div class="agenda-footer"><p>Selecciona “Inscribirme” para abrir la preinscripción del curso.</p><button class="btn btn-small btn-outline-dark" type="button" data-enroll-open>Preinscripción general</button></div>
           </div>
         </div>
       </div>
@@ -398,13 +402,9 @@
           </div>
           <a class="btn" href="https://maps.app.goo.gl/soqThEeTB7P6hYpK9" target="_blank" rel="noopener noreferrer">Ver ubicación en Google Maps</a>
         </div>
-        <div class="office-map-card reveal" aria-label="Referencia de ubicación de la oficina">
-          <div class="office-map-visual">
-            <span class="office-map-dot" aria-hidden="true"></span>
-            <strong>Av. 16 de Julio — El Prado</strong>
-            <p>Edificio Herrmann · Piso 1 Mezzanine</p>
-            <small>Centro de La Paz</small>
-          </div>
+        <div class="office-map-card reveal" aria-label="Mapa de ubicación de la oficina">
+          <iframe title="Mapa de EGEI Digital en La Paz" src="https://www.google.com/maps?q=Av.%2016%20de%20Julio%20Edificio%20Herrmann%20La%20Paz%20Bolivia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="office-map-caption"><div><strong>EGEI Digital</strong><span>Av. 16 de Julio (El Prado)</span></div><a href="https://maps.app.goo.gl/soqThEeTB7P6hYpK9" target="_blank" rel="noopener noreferrer">Cómo llegar →</a></div>
         </div>
       </div>
     </section>

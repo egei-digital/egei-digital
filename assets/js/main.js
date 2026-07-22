@@ -188,15 +188,12 @@ counters.forEach(counter=>counterObserver.observe(counter));
   links.forEach(link => {
     const network = link.dataset.socialLink;
     const url = (institution[network] || '').trim();
-    if (url) {
-      link.href = url;
-      link.classList.remove('social-link-pending');
-    } else {
-      link.href = '#contacto';
-      link.classList.add('social-link-pending');
-      link.removeAttribute('target');
-      link.removeAttribute('rel');
-      link.title = `Agrega el enlace de ${network} desde Panel > Configuración`;
-    }
+    const fallback = network === 'facebook' ? 'https://www.facebook.com/' : 'https://www.instagram.com/';
+    link.href = url || fallback;
+    link.classList.remove('social-link-pending');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('rel', 'noopener noreferrer');
+    if (!url) link.title = `Configura el enlace oficial de ${network} desde Panel > Configuración`;
+    else link.removeAttribute('title');
   });
 })();

@@ -583,3 +583,13 @@ body.dark-mode .egei-contact-notice{background:rgba(24,52,89,.7);border-color:#3
 body.dark-mode .social-float{border-color:#eaf2ff;box-shadow:0 16px 36px rgba(0,0,0,.48)}
 @media(max-width:760px){.social-float-stack{right:15px;bottom:88px;gap:9px}.social-float{width:46px;height:46px;border-width:2px}.social-float svg{width:22px;height:22px}.social-float span{display:none}}
 @media(prefers-reduced-motion:reduce){.social-float{transition:none}}
+
+
+/* V6.7: botones sociales flotantes siempre visibles */
+.social-float-stack{position:fixed!important;left:18px!important;right:auto!important;bottom:24px!important;z-index:9999!important;display:flex!important;flex-direction:column!important;gap:12px!important;align-items:flex-start!important;visibility:visible!important;opacity:1!important}
+.social-float{display:flex!important;width:58px!important;height:58px!important;opacity:1!important;visibility:visible!important;pointer-events:auto!important;border:3px solid #fff!important;box-shadow:0 14px 34px rgba(0,0,0,.30)!important}
+.social-float span{left:68px!important;right:auto!important}
+.social-float-facebook{background:#1877f2!important}
+.social-float-instagram{background:radial-gradient(circle at 30% 110%,#ffd600 0 10%,#ff7a00 28%,#ff0169 58%,#d300c5 78%,#7638fa 100%)!important}
+.social-float.social-link-pending{opacity:1!important;cursor:pointer!important}
+@media(max-width:760px){.social-float-stack{left:12px!important;bottom:16px!important}.social-float{width:50px!important;height:50px!important}.social-float span{display:none!important}}

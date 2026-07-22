@@ -50,6 +50,8 @@
     status.className = 'egei-form-status';
     const data = Object.fromEntries(new FormData(form).entries());
     delete data.consent;
+    data.communicationAllowed = true;
+    data.source = 'Formulario web';
     try {
       const record = await EGEIData.createRegistration(data);
       form.reset();

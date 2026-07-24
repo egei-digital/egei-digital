@@ -621,3 +621,264 @@ body.dark-mode .egei-pattern-soft .course-story-card{background:#071326!importan
 @media(max-width:640px){.courses-grid-v6{grid-template-columns:1fr;gap:18px}.course-story-card{min-height:510px;border-radius:26px!important}.course-story-content{padding:30px 21px 21px!important}.course-story-content .course-actions{align-items:stretch!important}.course-story-content .course-info,.course-story-content [data-enroll-open]{flex:1!important;justify-content:center!important;padding-inline:10px!important}.course-story-media .course-mode{font-size:.62rem!important;max-width:48%;text-align:center}}
 @media(prefers-reduced-motion:reduce){.course-story-card,.course-story-media img,.course-story-content .course-info::before{transition:none!important}}
 \n\n/* ===== Versión 7.1 · ajustes solicitados ===== */\n/* Facebook e Instagram con el mismo tamaño y movimiento premium de WhatsApp */\n.social-float-stack{gap:14px!important}\n.social-float{\n  width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;\n  border:3px solid #fff!important;border-radius:50%!important;\n  animation:waPremiumFloat 2.8s ease-in-out infinite,waPremiumGlow 2.8s ease-in-out infinite!important;\n  isolation:isolate;overflow:visible!important;\n}\n.social-float:nth-child(2){animation-delay:.22s!important}\n.social-float::before{\n  content:"";position:absolute;inset:-6px;border:2px solid currentColor;border-radius:50%;\n  opacity:.34;animation:waPulse 2s infinite;pointer-events:none;z-index:-1;\n}\n.social-float::after{\n  content:"";position:absolute;inset:8px;border-radius:50%;border:1px solid rgba(255,255,255,.5);pointer-events:none;\n}\n.social-float:hover{animation-play-state:paused!important;transform:translateY(-5px) scale(1.07)!important}\n.social-float svg{width:32px!important;height:32px!important;position:relative;z-index:2}\n.social-float-facebook{color:#fff!important}\n.social-float-instagram{color:#fff!important}\n\n/* Imágenes de cursos con esquinas claramente redondeadas */\n.course-story-media{\n  inset:10px!important;height:calc(100% - 20px)!important;border-radius:22px!important;\n  overflow:hidden!important;\n}\n.course-story-media img{border-radius:22px!important}\n.course-story-card::after{inset:10px!important;border-radius:22px!important}\n.course-story-content{left:10px!important;right:10px!important;bottom:10px!important;border-radius:0 0 22px 22px!important}\n\n@media(max-width:760px){\n  .social-float-stack{left:12px!important;bottom:18px!important;gap:12px!important}\n  .social-float{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important}\n  .social-float svg{width:32px!important;height:32px!important}\n  .course-story-media{inset:8px!important;height:calc(100% - 16px)!important;border-radius:20px!important}\n  .course-story-media img{border-radius:20px!important}\n  .course-story-card::after{inset:8px!important;border-radius:20px!important}\n  .course-story-content{left:8px!important;right:8px!important;bottom:8px!important;border-radius:0 0 20px 20px!important}\n}\n@media(prefers-reduced-motion:reduce){.social-float{animation:none!important}.social-float::before{animation:none!important}}\n
+
+/* =========================================================
+   V7.2 — CORRECCIÓN DEFINITIVA DE TARJETAS Y BOTONES FLOTANTES
+   ========================================================= */
+
+/* TARJETAS: imagen superior uniforme, completa y con esquinas redondeadas */
+.visual-fix-v72 .courses-grid-v6{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:26px!important;
+  align-items:stretch!important;
+}
+.visual-fix-v72 .course-story-card{
+  display:flex!important;
+  flex-direction:column!important;
+  min-height:0!important;
+  height:100%!important;
+  padding:12px!important;
+  border-radius:28px!important;
+  overflow:hidden!important;
+  background:#fff!important;
+  border:1px solid rgba(14,56,125,.12)!important;
+  box-shadow:0 18px 46px rgba(7,28,72,.12)!important;
+}
+.visual-fix-v72 .course-story-card::after{
+  display:none!important;
+}
+.visual-fix-v72 .course-story-media{
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  height:260px!important;
+  flex:0 0 260px!important;
+  border-radius:20px!important;
+  overflow:hidden!important;
+  background:#eaf0f8!important;
+}
+.visual-fix-v72 .course-story-media::after{
+  content:""!important;
+  position:absolute!important;
+  inset:58% 0 0!important;
+  display:block!important;
+  background:linear-gradient(transparent,rgba(3,13,37,.35))!important;
+  z-index:1!important;
+}
+.visual-fix-v72 .course-story-media img{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+  max-width:none!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  border-radius:20px!important;
+  transform:none!important;
+}
+.visual-fix-v72 .course-story-card:hover .course-story-media img{
+  transform:scale(1.035)!important;
+}
+.visual-fix-v72 .course-story-media .course-badge{
+  top:14px!important;
+  left:14px!important;
+}
+.visual-fix-v72 .course-story-media .course-mode{
+  top:auto!important;
+  right:14px!important;
+  bottom:14px!important;
+  z-index:3!important;
+}
+.visual-fix-v72 .course-story-content{
+  position:relative!important;
+  left:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  display:flex!important;
+  flex:1!important;
+  flex-direction:column!important;
+  padding:22px 10px 10px!important;
+  color:#10284f!important;
+  background:transparent!important;
+  border-radius:0!important;
+}
+.visual-fix-v72 .course-story-content h3{
+  color:#10284f!important;
+  font-size:1.42rem!important;
+  line-height:1.12!important;
+  text-shadow:none!important;
+}
+.visual-fix-v72 .course-story-content>p{
+  color:#5b687d!important;
+  font-size:.88rem!important;
+  text-shadow:none!important;
+}
+.visual-fix-v72 .course-story-content .course-meta span{
+  color:#174c9e!important;
+  background:#edf4ff!important;
+  border-color:#dbe8fb!important;
+}
+.visual-fix-v72 .course-story-content .course-actions{
+  margin-top:auto!important;
+}
+.visual-fix-v72 .course-story-content .btn-course-secondary,
+.visual-fix-v72 .course-story-content .course-info{
+  color:#174c9e!important;
+  background:#edf4ff!important;
+  border-color:#cfe0f7!important;
+  backdrop-filter:none!important;
+}
+.visual-fix-v72 .course-story-content .course-info::before{
+  background:#174c9e!important;
+  color:#fff!important;
+}
+.visual-fix-v72 .course-story-content .btn-course-secondary{
+  min-height:48px!important;
+  border-radius:999px!important;
+  padding:0 18px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  font-weight:900!important;
+}
+
+/* BOTONES FLOTANTES: los tres idénticos en tamaño, pulso y movimiento */
+.visual-fix-v72 .social-float-stack{
+  position:fixed!important;
+  right:18px!important;
+  left:auto!important;
+  bottom:22px!important;
+  z-index:9999!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  gap:13px!important;
+}
+.visual-fix-v72 .social-float{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:60px!important;
+  height:60px!important;
+  min-width:60px!important;
+  min-height:60px!important;
+  padding:0!important;
+  border:3px solid #fff!important;
+  border-radius:50%!important;
+  color:#fff!important;
+  box-shadow:0 16px 38px rgba(10,28,65,.34)!important;
+  animation:socialUnifiedFloat 2.8s ease-in-out infinite!important;
+  transition:transform .2s ease,box-shadow .2s ease!important;
+  overflow:visible!important;
+  isolation:isolate!important;
+}
+.visual-fix-v72 .social-float:nth-child(2){animation-delay:.16s!important}
+.visual-fix-v72 .social-float:nth-child(3){animation-delay:.32s!important}
+.visual-fix-v72 .social-float::before{
+  content:""!important;
+  position:absolute!important;
+  inset:-7px!important;
+  display:block!important;
+  border:2px solid currentColor!important;
+  border-radius:50%!important;
+  opacity:.42!important;
+  animation:socialUnifiedPulse 2s ease-out infinite!important;
+  z-index:-1!important;
+  pointer-events:none!important;
+}
+.visual-fix-v72 .social-float::after{
+  content:""!important;
+  position:absolute!important;
+  inset:8px!important;
+  border:1px solid rgba(255,255,255,.52)!important;
+  border-radius:50%!important;
+  pointer-events:none!important;
+}
+.visual-fix-v72 .social-float svg{
+  width:32px!important;
+  height:32px!important;
+  position:relative!important;
+  z-index:2!important;
+}
+.visual-fix-v72 .social-float span{
+  position:absolute!important;
+  right:72px!important;
+  left:auto!important;
+  padding:9px 12px!important;
+  border-radius:11px!important;
+  background:#07194c!important;
+  color:#fff!important;
+  font-size:.75rem!important;
+  font-weight:850!important;
+  white-space:nowrap!important;
+  opacity:0!important;
+  transform:translateX(7px)!important;
+  pointer-events:none!important;
+  transition:.2s!important;
+}
+.visual-fix-v72 .social-float:hover{
+  animation-play-state:paused!important;
+  transform:translateY(-5px) scale(1.07)!important;
+  box-shadow:0 22px 48px rgba(10,28,65,.44)!important;
+}
+.visual-fix-v72 .social-float:hover span{
+  opacity:1!important;
+  transform:none!important;
+}
+.visual-fix-v72 .social-float-facebook{background:#1877f2!important}
+.visual-fix-v72 .social-float-instagram{
+  background:radial-gradient(circle at 30% 110%,#ffd600 0 10%,#ff7a00 28%,#ff0169 58%,#d300c5 78%,#7638fa 100%)!important
+}
+.visual-fix-v72 .social-float-whatsapp{background:#25d366!important}
+.visual-fix-v72 .social-float-whatsapp .wa-pulse{display:none!important}
+
+@keyframes socialUnifiedFloat{
+  0%,100%{transform:translateY(0) rotate(-2deg)}
+  50%{transform:translateY(-9px) rotate(2deg)}
+}
+@keyframes socialUnifiedPulse{
+  0%{transform:scale(.88);opacity:.72}
+  72%,100%{transform:scale(1.3);opacity:0}
+}
+
+body.dark-mode.visual-fix-v72 .course-story-card{
+  background:#0a1830!important;
+  border-color:rgba(255,255,255,.14)!important;
+}
+body.dark-mode.visual-fix-v72 .course-story-content h3{color:#fff!important}
+body.dark-mode.visual-fix-v72 .course-story-content>p{color:#bdc9dc!important}
+
+@media(max-width:1040px){
+  .visual-fix-v72 .courses-grid-v6{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .visual-fix-v72 .course-story-media{height:250px!important;flex-basis:250px!important}
+}
+@media(max-width:640px){
+  .visual-fix-v72 .courses-grid-v6{grid-template-columns:1fr!important;gap:18px!important}
+  .visual-fix-v72 .course-story-card{padding:9px!important;border-radius:23px!important}
+  .visual-fix-v72 .course-story-media{
+    height:230px!important;
+    flex-basis:230px!important;
+    border-radius:17px!important;
+  }
+  .visual-fix-v72 .course-story-media img{border-radius:17px!important}
+  .visual-fix-v72 .course-story-content{padding:19px 8px 8px!important}
+  .visual-fix-v72 .social-float-stack{
+    right:12px!important;
+    left:auto!important;
+    bottom:16px!important;
+    gap:11px!important;
+  }
+  .visual-fix-v72 .social-float{
+    width:56px!important;
+    height:56px!important;
+    min-width:56px!important;
+    min-height:56px!important;
+  }
+  .visual-fix-v72 .social-float svg{width:29px!important;height:29px!important}
+  .visual-fix-v72 .social-float span{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .visual-fix-v72 .social-float,
+  .visual-fix-v72 .social-float::before{animation:none!important}
+}

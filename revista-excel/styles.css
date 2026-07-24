@@ -154,3 +154,4 @@ button,input,a{-webkit-tap-highlight-color:transparent}
 
 .back-site{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
 @media(max-width:760px){.back-site{font-size:0;width:38px;height:38px;padding:0}.back-site:before{content:"←";font-size:20px}}
+\n\n/* Botón claro para regresar al inicio del sitio */\n.back-site{background:linear-gradient(145deg,#27d980,#139454)!important;border-color:transparent!important;white-space:nowrap;text-decoration:none}\n@media(max-width:760px){\n  .back-site{width:auto!important;min-width:44px!important;padding:0 10px!important;font-size:11px!important}\n  .back-site::before{content:none!important}\n}\n

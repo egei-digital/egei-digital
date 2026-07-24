@@ -1,0 +1,8 @@
+REVISTA DIGITAL EXCEL - EGEI DIGITAL
+
+1. Sube toda la carpeta a tu repositorio de GitHub Pages.
+2. Conserva exactamente la estructura de archivos.
+3. El enlace será similar a:
+   https://egei-digital.github.io/egei-digital/revista-excel-egei/
+
+Para probarla en tu computadora, abre index.html.

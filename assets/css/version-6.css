@@ -52,9 +52,3 @@ body.dark-mode .course-card-v6 .course-meta span{background:#152d54;color:#d9e8f
 body.dark-mode .btn-course-secondary{color:#dceaff!important;border-color:#31598e!important}
 body.dark-mode .btn-course-secondary:hover{background:#142b4e!important}
 @media(max-width:560px){.course-actions{grid-template-columns:1fr}.course-card-v6 .course-media{aspect-ratio:16/9}}
-
-/* V7.1 — acceso al pensum desde la tarjeta de Excel */
-.course-syllabus-link{
-  text-decoration:none;
-  cursor:pointer;
-}

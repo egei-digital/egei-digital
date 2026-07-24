@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="theme-color" content="#07130d" />
+  <meta name="description" content="Revista digital del Curso de Excel - EGEI Digital" />
+  <meta property="og:title" content="Curso de Excel | EGEI Digital" />
+  <meta property="og:description" content="Conoce el contenido, módulos, modalidades y certificación del Curso de Excel." />
+  <meta property="og:image" content="assets/cover.jpg" />
+  <title>Curso de Excel | Revista Digital EGEI</title>
+  <link rel="icon" href="assets/cover.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">E</div>
+        <div>
+          <strong>EGEI DIGITAL</strong>
+          <span>Revista del Curso de Excel</span>
+        </div>
+      </div>
+      <div class="top-actions">
+        <a class="icon-btn back-site" href="../" aria-label="Volver al sitio">← Volver</a>
+        <button id="shareBtn" class="icon-btn" aria-label="Compartir">Compartir</button>
+        <button id="fullBtn" class="icon-btn" aria-label="Pantalla completa">Pantalla completa</button>
+      </div>
+    </header>
+
+    <section class="viewer" aria-label="Revista digital">
+      <button id="prevBtn" class="nav prev" aria-label="Página anterior">‹</button>
+      <div id="book" class="book" aria-live="polite">
+        <div class="sheet left"><img id="leftPage" alt="" /></div>
+        <div class="gutter"></div>
+        <div class="sheet right"><img id="rightPage" alt="" /></div>
+        <div id="turnSheet" class="turn-sheet"><img id="turnImage" alt="" /></div>
+      </div>
+      <button id="nextBtn" class="nav next" aria-label="Página siguiente">›</button>
+    </section>
+
+    <footer class="controls">
+      <div class="page-info">
+          <span id="counter">1 / 13</span>
+          <div id="zoomControls" class="zoom-controls" aria-label="Controles de zoom">
+            <button id="zoomOut" type="button" aria-label="Alejar">−</button>
+            <button id="zoomReset" type="button" aria-label="Restablecer zoom">100%</button>
+            <button id="zoomIn" type="button" aria-label="Acercar">+</button>
+          </div>
+        </div>
+      <input id="progress" type="range" min="1" max="13" value="1" aria-label="Ir a página" />
+      <a class="cta" href="https://wa.me/59176887684?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20Curso%20de%20Excel" target="_blank" rel="noopener">Inscribirme</a>
+    </footer>
+
+    <div class="hint" id="hint">Desliza o toca las flechas para pasar página</div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
